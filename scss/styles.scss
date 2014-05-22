@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+// SMACSS Your Sass Up by Mina Markham
+// A SMACSS-based starter toolkit for SCSS projects
+//
+// The toolkit uses recommendations from and Scalable and Modular Architecture for CSS (SMACSS) http://smacss.com/book
+// with optional support for Bourbon, Susy, Compass
+
+// Site:   http://
+// Author:
+// Email:
+// Date:
+
+/*
+
+Contents:
+
+01. Utilities
+02. Libraries
+03. Base
+04. Layout
+05. Modules
+06. States
+07. Theme
+08. @font-face
+09. Print
+10. Shame
+
+*/
+
+// ==========================================================================
+// $Sass Globbing Notes
+// http://fuseinteractive.ca/blog/automatic-sass-imports-sass-globbing
+// $ sass -r sass-globbing --watch sass_dir:css_dir
+// ==========================================================================
+
+// @example
+// @import 'dir/*';
+// @import 'dir/**/*';
+
+// All partials inside 'dir' are imported.
+// By default, partials are imported alphabetically.
+// In order to import them in a specific order
+// we can number the partial files like so…
+//
+// _1.layout-small.scss
+// _2.layout-wide.scss
+
+// ==========================================================================
+// $Utilities
+// ==========================================================================
+@import "utilities/index"; // Variables, mixins, grid-system, etc.
+
+// ==========================================================================
+// $Lib
+// import third-party dependancies
+// ==========================================================================
+
+// 1. Bourbon
+// 2. Neat
+// 3. Bitters
+// 4. Susy
+// 5. Pesticide
+// 6. Prism
+// 7. RRSSB
+// 8. Tipsy
+
+@import 'utilities/lib';
+@import "utilities/lib/*";
+
+// ==========================================================================
+// $Base
+// ==========================================================================
+@import 'base/index';
+
+// ==========================================================================
+// $Layout
+// ==========================================================================
+@import 'layout/index';
+
+// ==========================================================================
+// $Modules
+// ==========================================================================
+@import 'modules/index';
+
+// ==========================================================================
+// $States
+// ==========================================================================
+@import 'states/index';
+
+// ==========================================================================
+// $Themes
+// ==========================================================================
+@import 'themes/index';
+
+// ==========================================================================
+// $@font-face
+// ==========================================================================
+@import 'utilities/fonts';
+
+// ==========================================================================
+// $Print
+// Inlined to avoid required HTTP connection: h5bp.com/r
+// ==========================================================================
+@import 'states/print';
+
+// ==========================================================================
+// $Shame
+// because hacks happen
+// ==========================================================================
+@import 'shame';

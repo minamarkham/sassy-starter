@@ -1,0 +1,27 @@
+// media object
+
+// @module
+.media {
+  @extend %clearfix;
+  
+  // @submodule
+  &-pull-right {
+    float: right;
+    margin-left: rem(33);
+  }
+
+  &-pull-left {
+    float: left;
+    margin-right: rem(33);
+  }
+
+  // 1. Create new block formatting context in modern browsers
+  // 2. Avoid shrink-wrap behaviour of table-cell
+  // www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+  // facebook.com
+
+  &-body {
+    display: table-cell; /* 1 */
+    width: 10000px; /* 2 */
+  }
+}

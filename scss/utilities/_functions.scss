@@ -1,0 +1,67 @@
+// ==========================================================================
+// Functions
+// ==========================================================================
+
+// Contents: 
+
+// 01. Conversions
+// 02. Aspect Ratios
+// 03. Context Calculator
+// 04. Strip Unit Values
+
+// ============================================================
+// $Conversions
+// ============================================================
+// Converts pixels to ems/rems and vice-versa depending on the mixing you're using
+// http://www.pjmccormick.com/sweet-sass-function-convert-px-em
+
+// px to em 
+@function em($target, $context: $base-font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
+
+// px to rem
+@function rem($target, $context: $base-font-size) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0rem;
+}
+
+// em to px
+@function px($target, $context: $base-font-size) {
+  @if $target == 0 { @return 0 }
+  @return $target * $context + 0px;
+}
+
+// ============================================================
+// $Aspect Ratios
+// ============================================================
+
+// @returns Aspect Ratio Percentage
+// padding-bottom: aspect-ratio(16,9); // @returns 56.25%
+@function aspect-ratio($ratio-numerator, $ratio-denominator) {
+  @return (($ratio-denominator / $ratio-numerator) * 100%);
+}
+
+// @returns Based on Fixed Image Dimensions
+// padding: 0 0 aspect-ratio-fixed(1080, 720); // @returns 66.666666666667%
+@function aspect-ratio-fixed($w, $h) {
+  @return ($h / $w) * 100%;
+}
+
+// ============================================================
+// $Context Calculator
+// ============================================================
+
+@function context-calc($target, $context) {
+  @return ($target / $context) * 100%;
+}
+
+// ============================================================
+// $Strip Unit Values
+// http://hugogiraudel.com/2013/08/12/sass-functions
+// ============================================================
+
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
