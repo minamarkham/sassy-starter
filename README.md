@@ -15,77 +15,51 @@ Styles are broken down into the following groups: **Base, Layout, Module, State,
 
 ## Directory structure
 
-  + scss/
+```
+  + scss/  
+  |  
+  | + base/                # reset, typography, site-wide  
+  |   |-- _index.scss      # imports for all base styles  
+  |   |-- _base.scss       # base styles  
+  |   |-- _normalize.scss  # normalize reset  
+  |  
+  | + layout/              # major components, e.g., header, footer etc.  
+  |   |-- _index.scss      # imports for all layout styles  
   |
-  | + base/                # reset, typography, site-wide
-  |   |-- _index.scss            # imports for all base styles
-  |   |-- _base.scss             # base styles
-  |   |-- _normalize.scss        # normalize reset
+  | + modules/             # minor components, e.g., buttons, widgets etc.
+  |   |-- _index.scss      # imports for all modules
   |
-  | + layout/                    # major components, e.g., header, footer etc.
-  |   |-- _index.scss            # imports for all layout styles
-  |   |-- _footer.scss             # footer module
-  |   |-- _header.scss           # header module
-  |   |-- _home.scss             # home module
-  |   |-- _main.scss             # main module
-  |   |-- _nav.scss            # navigation module
+  | + states/              # js-based classes, alternative states e.g., success or error state
+  |   |-- _index.scss      # imports for all state styles
+  |   |-- _states.scss     # state rules
+  |   |-- _print.scss      # print styles
+  |   |-- _touch.scss      # touch styles
   |
-  | + modules/                   # minor components, e.g., buttons, widgets etc.
-  |   |-- _index.scss            # imports for all modules
-  |   |-- _btn.scss          # buttons
-  |   |-- _cta.scss              # call to action
-  |   |-- _flag.scss             # flag object
-  |   |-- _form.scss         # forms
-  |   |-- _hero.scss             # hero object
-  |   |-- _media.scss            # media object
-  |   |-- _messages.scss           # validations & alerts
-  |   |-- _table.scss        # tables
+  | + themes/              # alternative themes (optional)
+  |   |-- _index.scss      # imports for all themes
   |
-  | + states/                    # js-based classes, alternative states e.g., success or error state
-  |   |-- _index.scss            # imports for all state styles
-  |   |-- _states.scss         # state rules
-  |   |-- _print.scss        # print styles
-  |   |-- _touch.scss        # touch styles
+  | + utilities/           # non-CSS outputs (i.e. mixins, variables) & non-modules
+  |   |-- _index.scss      # imports for all mixins + global project variables
+  |   |-- _fonts.scss      # @font-face mixins
+  |   |-- _functions.scss  # ems to rems conversion, etc.
+  |   |-- _global.scss     # global variables
+  |   |-- _helpers.scss    # placeholder helper classes
+  |   |-- _mixins.scss     # media queries, CSS3, etc.
   |
-  | + themes/                    # alternative themes (optional)
-  |   |-- _index.scss            # imports for all themes
-  |
-  | + utilities/             # non-CSS outputs (i.e. mixins, variables) & non-modules
-  |   |-- _index.scss            # imports for all mixins + global project variables
-  |   |-- _fonts.scss        # @font-face mixins
-  |   |-- _functions.scss        # ems to rems conversion, etc.
-  |   |-- _global.scss           # global variables
-  |   |-- _helpers.scss        # placeholder helper classes
-  |   |-- _mixins.scss         # media queries, CSS3, etc.
-  |
-  |   |-- _lib.scss            # imports for third party styles
+  |   |-- _lib.scss        # imports for third party styles
   |   |-- + lib/           # third party styles
-  |       |-- _burger.scss         # http://joren.co/sass-burger/
-  |       |-- _pesticide.scss      # http://pesticide.io/
-  |       |-- _prism.scss          # customized version of http://prismjs.com/
-  |       |-- _rrssb.scss          # http://www.kurtnoble.com/labs/rrssb
-  |       |-- _tipsy.scss          # http://dangthanh.org/labs/tipsy/
   |
-  |       |-- + bourbon/           # http://bourbon.io/
-  |           |-- _bourbon.scss
-  |           ...
-  |       |-- _susy.scss           # http://susy.oddbird.net/
-  |       |-- + susy/              # susy files
-  |           ...
-  |       |-- + font-awesome/      # http://fontawesome.io/
-  |           |-- _font-awesome.scss
-  |           ...
+  |   + ie.scss            # IE specific Sass file
+  |   + style.scss         # primary Sass file
+  |   + _shame.scss        # because hacks happen
   |
-  |   + ie.scss                    # IE specific Sass file
-  |   + style.scss                 # primary Sass file
-  |   + _shame.scss            # because hacks happen
-  |
-  + .htaccess                      # Apache server configs
-  + config.rb                      # Compass configuration file
-  + crossdomain.xml                # cross-domain requests
-  + deploy.rb                      # Capistrano configuration file
-  + Gruntfile.js                   # Grunt configuration & tasks
-  + package.json                   # Grunt metadata & dependencies
+  + .htaccess              # Apache server configs
+  + config.rb              # Compass configuration file
+  + crossdomain.xml        # cross-domain requests
+  + deploy.rb              # Capistrano configuration file
+  + Gruntfile.js           # Grunt configuration & tasks
+  + package.json           # Grunt metadata & dependencies
+```
 
 ## Thanks & Resources
 
