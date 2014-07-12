@@ -6,25 +6,24 @@
 // The toolkit uses recommendations from and Scalable and Modular Architecture for CSS (SMACSS) http://smacss.com/book
 // with optional support for Bourbon, Susy, Compass
 
-// Site:   http://
-// Author:
-// Email:
-// Date:
+// Site:    https://github.com/minamarkham/sassy-starter
+// Author:  Mina Markham
+// Email:   mina@mina.codes
+// Date:    07/11/14
 
 /*
 
 Contents:
 
-01. Utilities
+01. Utilities ( COMPASS, Variables, Functions, Mixins, etc... )
 02. Libraries
-03. Base
-04. Layout
-05. Modules
+03. Base ( regular elements )
+04. Layout ( layout template, grid structure )
+05. Modules ( modules, background, colors, typography.. )
 06. States
-07. Theme
-08. @font-face
-09. Print
-10. Shame
+07. @font-face
+08. Print
+09. Shame
 
 */
 
@@ -56,15 +55,6 @@ Contents:
 // import third-party dependancies
 // ==========================================================================
 
-// 1. Bourbon
-// 2. Neat
-// 3. Bitters
-// 4. Susy
-// 5. Pesticide
-// 6. Prism
-// 7. RRSSB
-// 8. Tipsy
-
 @import 'utilities/lib';
 @import "utilities/lib/*";
 
@@ -89,23 +79,16 @@ Contents:
 @import 'states/index';
 
 // ==========================================================================
-// $Themes
-// ==========================================================================
-@import 'themes/index';
-
-// ==========================================================================
 // $@font-face
 // ==========================================================================
 @import 'utilities/fonts';
 
 // ==========================================================================
 // $Print
-// Inlined to avoid required HTTP connection: h5bp.com/r
 // ==========================================================================
 @import 'states/print';
 
 // ==========================================================================
 // $Shame
-// because hacks happen
 // ==========================================================================
 @import 'shame';

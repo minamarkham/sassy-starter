@@ -2,20 +2,13 @@
 // Functions
 // ==========================================================================
 
-// Contents: 
-
-// 01. Conversions
-// 02. Aspect Ratios
-// 03. Context Calculator
-// 04. Strip Unit Values
-
 // ============================================================
 // $Conversions
 // ============================================================
 // Converts pixels to ems/rems and vice-versa depending on the mixing you're using
 // http://www.pjmccormick.com/sweet-sass-function-convert-px-em
 
-// px to em 
+// px to em
 @function em($target, $context: $base-font-size) {
    @if $target == 0 { @return 0 }
    @return $target / $context + 0em;

@@ -4,37 +4,10 @@
 // https://github.com/sutter/POPY-Starter-integration-web/blob/master/scss/tools/_mixins.scss
 // ==========================================================================
 
-// Contents: 
-
-// 00. Buttons
-// 00. Media Queries
-// 00. IE Specific Styles
-// 00. Sticky Footer
-// 00. Fullscreen Background
-// 00. Opacity
-// 00. Selection
-// 00. Position
-// 00. CSS3
-//     00. Prefixer
-//     00. Border-radius
-//     00. Transition
-//     00. Box-sizing
-//     00. Filter
-//     00. ul-list-inline
-//     00. reset-ul
-//     00. transform
-//     00. Keyframes
-//     00. Calc
-// 00. inline-block
-// 00. Retina Displays
-// 00. Striped Gradient
-// 00. Placeholders
-// 00. RGBA Fallback
-
 // ============================================================
 // = Buttons
 // ============================================================
-// This customises your buttons with a different background color and text color. 
+// This customises your buttons with a different background color and text color.
 // If no text color is specified it will default to white.
 
 @mixin btn($color-background, $color-text: #fff) {
@@ -42,7 +15,7 @@
   border-color: darken($color-border, 6%);
   color: $color-text;
 }
- 
+
 // ============================================================
 // = Media Queries
 // ============================================================
@@ -70,7 +43,7 @@
 // ============================================================
 
 // @example
-// .foobar { 
+// .foobar {
 //   .lt-ie8 & { @include old-ie { ... } }
 //   .lt-ie9 & { @include old-ie { ... } }
 // }
@@ -104,21 +77,21 @@
 }
 
 // ============================================================
-// = Fullscreen Background
+// = Fullscreen Background for < IE8
 // ============================================================
 @mixin fullscreen-bg() {
-  position: fixed; 
-  top: -50%; 
-  left: -50%; 
-  width: 200%; 
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
   height: 200%;
   img {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    margin: auto; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     min-width: 50%;
     min-height: 50%;
   }
@@ -139,131 +112,6 @@
 }
 
 // ============================================================
-// = Selection
-// ============================================================
-$prefixes: ("-webkit-","-moz-", "");
-@mixin selection($color, $background) {
-  @each $prefix in $prefixes {
-    ::#{$prefix}selection {
-      color: $color;
-      background: $background;
-      text-shadow:none;
-    }
-  }
-}
-
-// ============================================================
-// = Position
-// ============================================================
-@mixin position ($position: relative, $coordinates: 0 0 0 0) {
-  @if type-of($position) == list {
-    $coordinates: $position;
-    $position: relative;
-  }
-  $top: nth($coordinates, 1);
-  $right: nth($coordinates, 2);
-  $bottom: nth($coordinates, 3);
-  $left: nth($coordinates, 4);
-  position: $position;
-  @if $top == auto {
-    top: $top;
-  }
-  @else if not(unitless($top)) {
-    top: $top;
-  }
-  @if $right == auto {
-    right: $right;
-  }
-  @else if not(unitless($right)) {
-    right: $right;
-  }
-  @if $bottom == auto {
-    bottom: $bottom;
-  }
-  @else if not(unitless($bottom)) {
-    bottom: $bottom;
-  }
-  @if $left == auto {
-    left: $left;
-  }
-  @else if not(unitless($left)) {
-    left: $left;
-  }
-}
-
-// ============================================================
-// == CSS3
-// ============================================================
-
-// ============================================================
-// = Prefixer
-// ============================================================
-$prefix-for-webkit:    true !default;
-$prefix-for-mozilla:   true !default;
-$prefix-for-microsoft: true !default;
-$prefix-for-opera:     true !default;
-$prefix-for-spec:      true !default;
-
-@mixin prefixer ($property, $value, $prefixes) {
-  @each $prefix in $prefixes {
-
-    @if $prefix == webkit and $prefix-for-webkit == true {
-      -webkit-#{$property}: $value;
-    }
-    @else if $prefix == moz and $prefix-for-mozilla == true {
-      -moz-#{$property}: $value;
-    }
-    @else if $prefix == ms and $prefix-for-microsoft == true {
-      -ms-#{$property}: $value;
-    }
-    @else if $prefix == o and $prefix-for-opera == true {
-      -o-#{$property}: $value;
-    }
-    @else if $prefix == spec and $prefix-for-spec == true {
-      #{$property}: $value;
-    }
-    @else {
-      @warn "Unrecognized prefix: #{$prefix}";
-    }
-  }
-}
-
-@mixin disable-prefix-for-all() {
-  $prefix-for-webkit:    false;
-  $prefix-for-mozilla:   false;
-  $prefix-for-microsoft: false;
-  $prefix-for-opera:     false;
-  $prefix-for-spec:      false;
-}
-
-// ============================================================
-// = Border-radius
-// ============================================================
-@mixin border-radius($radius : 5px) {
-  @include prefixer(border-radius, $radius, moz spec)
-}
-
-@mixin border-top-radius($radius : 5px) {
-  @include prefixer(border-top-left-radius, $radius, moz spec);
-  @include prefixer(border-top-right-radius, $radius, moz spec);
-}
-
-@mixin border-bottom-radius($radius : 5px) {
-  @include prefixer(border-bottom-left-radius, $radius, moz spec);
-  @include prefixer(border-bottom-right-radius, $radius, moz spec);
-}
-
-@mixin border-left-radius($radius : 5px) {
-  @include prefixer(border-top-left-radius, $radius, moz spec);
-  @include prefixer(border-bottom-left-radius, $radius, moz spec);
-}
-
-@mixin border-right-radius($radius : 5px) {
-  @include prefixer(border-top-right-radius, $radius, moz spec);
-  @include prefixer(border-bottom-right-radius, $radius, moz spec);
-}
-
-// ============================================================
 // = Transition
 // ============================================================
 @mixin transition ($transition : all .3s ease-in-out) {
@@ -277,45 +125,6 @@ $prefix-for-spec:      true !default;
   //  content-box | border-box | inherit
   @include prefixer(box-sizing, $box, webkit moz spec);
 }
-
-// ============================================================
-// = Filter
-// ============================================================
-@mixin filter (
-  $filter-1,
-  $filter-2 : false,
-  $filter-3 : false,
-  $filter-4 : false,
-  $filter-5 : false,
-  $filter-6 : false,
-  $filter-7 : false,
-  $filter-8 : false,
-  $filter-9 : false,
-  $filter-10: false
-  ) {
-  $filter : compact($filter-1, $filter-2, $filter-3, $filter-4, $filter-5, $filter-6, $filter-7, $filter-8, $filter-9, $filter-10);
-  @include prefixer(filter, $filter, webkit moz spec);
-}
-
-// ============================================================
-// = UL
-// ============================================================
-@mixin ul-list-inline() {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    @include inline-block();
-  }
-}
-
-@mixin reset-ul() {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 
 // ============================================================
 // = Transform
@@ -416,131 +225,6 @@ $prefix-for-spec:      true !default;
   }
 }
 
-// ============================================================
-// A mixin to turn a regular gradient into a striped one
-// CodePen: http://codepen.io/HugoGiraudel/pen/KxzrH
-// Article: http://css-tricks.com/striped-background-gradients
-// ============================================================
-
-@mixin stripes($colors, $direction: "to bottom") {  
-
-  $stripes : 100% / length($colors);
-  $firstCol : nth($colors, 1);
-  $auto : if( type-of($firstCol) == list, false, true );
-  $gradient : ();
-
-  @for $i from 1 through length($colors) {
-    $item : nth($colors, $i);
-    $dump : ();
-
-    @if $auto == true {
-      $dump : $item $stripes * ($i - 1), $item $stripes * $i;
-    } @else {
-
-      @if $i > 1 {
-        $prev : nth($colors, $i - 1);
-        $dump : $dump, nth($item, 1) nth($prev, 2);
-      }
-
-      $dump : $dump, $item;
-    }
-
-    $gradient : join($gradient, $dump, comma);
-  }
-
-  background: unquote('linear-gradient(') #{$direction} unquote(',') $gradient unquote(')');
-}
-
-
-// @demo1
-// Passing a collection of color-stops to the mixin
-// Direction is ommited since default is top to bottom
-//
-// If you have two lists (one of colors, one of stops)
-// Merge them with zip() (color list first)
-//
-// $colors: #1abc9c, #27ae60, #3498db, #16a085, #2980b9, #34495e, #1abc9c;
-// $stops : 18%, 33%, 46%, 55%, 65%, 83%, 100%; 
-//
-// $argument: zip($colors, $stops);
-
-// @example
-// h1 { @include stripes($color-stops-1); }
-$color-stops-1: #1abc9c 18%, #27ae60 33%, #3498db 46%, #16a085 55%, #2980b9 65%, #34495e 83%, #1abc9c 100%;
-
-
-// @demo2 (less useful)
-// Creating a collection of color-stops in a loop with hsl()
-// Also known as "pooping a rainbow"
-
-// @example
-// .demo-2 {
-//  $colors: (); // Contains colors
-//  $stops:  (); // Contains stops 
-
-//  @for $i from 1 through 15 {
-//    $colors : append($colors, hsl($i*10, 75%, 50%));
-//    $stops  : append($stops , unquote('#{$i*6}%'));
-//  }
-
-//  $color-stops-2: zip($colors, $stops); // Zipping both lists
-
-//  @include stripes($color-stops-2, "to right");
-//  If you want all stripes to have the same size,
-//  you can pass a list of colors without stops
-//  like $colors
-// }
-
-// ==========================================================================
-// Placeholders
-// https://github.com/drublic/Sass-Mixins/blob/master/mixins.scss
-// ==========================================================================
-
-// @example
-// input { @include placeholder-color($color); }
-
-@mixin placeholder-color($color) {
-  // Chrome, Safari, Opera
-  &::-webkit-input-placeholder {
-    color: $color;
-  }
-
-  // Gecko - Firefox 4 thru 18
-  &:-moz-placeholder {
-    color: $color;
-  }
-  // Gecko - Firefox 19+
-  &::-moz-placeholder {
-    color: $color;
-  }
-  
-  // IE10+
-  &:-ms-input-placeholder {
-    color: $color;
-  }
-}
-
-
-// @example
-// .selector { @include placeholder-styles { color: #bada55; font-weight: bold; } }
-
-@mixin placeholder-styles {
-
-  // Chrome, Safari, Opera
-  &::-webkit-input-placeholder {
-    @content
-  }
-
-  // Firefox 19+
-  &::-moz-placeholder {
-    @content
-  }
-
-  // IE 10+
-  &:-ms-input-placeholder {
-    @content
-  }
-}
 // ============================================================
 // $RGBA Fallback
 // ============================================================

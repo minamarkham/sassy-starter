@@ -6,7 +6,7 @@
   @import url($google-fonts-url);
 }
 
-@each $font-face in FONTNAME, FONTNAME, FONTNAME, FONTNAME {
+@each $font-face in $fonts {
   @font-face {
     font-family: $font-face;
     src: url('font/#{$font-face}.eot'); // IE9 Compat Modes

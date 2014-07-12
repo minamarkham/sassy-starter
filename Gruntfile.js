@@ -5,30 +5,9 @@
     npm install -g grunt-init
     npm init (creates a `package.json` file)
 
-    Project Dependencies:
-    ---------------------
-    npm install grunt --save-dev
-    npm install grunt-contrib-watch --save-dev
-    npm install grunt-contrib-jshint --save-dev
-    npm install grunt-contrib-uglify --save-dev
-    npm install grunt-contrib-requirejs --save-dev
-    npm install grunt-contrib-sass --save-dev
-    npm install grunt-contrib-imagemin --save-dev
-    npm install grunt-contrib-htmlmin --save-dev
-    npm install grunt-contrib-connect --save-dev
-    npm install grunt-contrib-jasmine --save-dev
-    npm install grunt-template-jasmine-requirejs --save-dev
-    npm install grunt-template-jasmine-istanbul --save-dev
-    npm install load-grunt-tasks --save-dev
-    npm install time-grunt --save-dev
-
     Simple Dependency Install:
     --------------------------
-    npm install (from the same root directory as the `package.json` file)
-
-    Gem Dependencies:
-    -----------------
-    gem install image_optim
+    npm install (from the same root directory as the `package.json` file
 
 */
 
@@ -113,6 +92,24 @@ module.exports = function(grunt) {
             dest: 'img/build/'
         }]
       }
+    }.
+    jekyll: {                             // Task
+      options: {                          // Universal options
+        bundleExec: true,
+        src : '<%= app %>'
+      },
+      dist: {                             // Target
+        options: {                        // Target options
+          dest: '<%= dist %>',
+          config: '_config.yml,_config.build.yml'
+        }
+      },
+      serve: {                            // Another target
+        options: {
+          dest: '.jekyll',
+          drafts: true
+        }
+      }
     }
   });
 
@@ -122,10 +119,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-jekyll');
 
   // run all the task(s)
   grunt.registerTask( 'default', [ 'watch'] ); // default 'grunt'
   grunt.registerTask( 'build', [ 'imagemin','sass:dist' ] ); // optimize images, compress css
+  grunt.registerTask( 'jekyll', [ 'jekyll' ]);
 
 };
 
