@@ -40,7 +40,6 @@ Styles are broken down into the following groups: **Base, Layout, Module, State,
   |   |-- _global.scss     # global variables
   |   |-- _helpers.scss    # placeholder helper classes
   |   |-- _mixins.scss     # media queries, CSS3, etc.
-  |
   |   |-- _lib.scss        # imports for third party styles
   |   |-- + lib/           # third party styles
   |
