@@ -33,9 +33,6 @@ Styles are broken down into the following groups: **Base, Layout, Module, State,
   |   |-- _print.scss      # print styles
   |   |-- _touch.scss      # touch styles
   |
-  | + themes/              # alternative themes (optional)
-  |   |-- _index.scss      # imports for all themes
-  |
   | + utilities/           # non-CSS outputs (i.e. mixins, variables) & non-modules
   |   |-- _index.scss      # imports for all mixins + global project variables
   |   |-- _fonts.scss      # @font-face mixins
