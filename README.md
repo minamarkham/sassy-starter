@@ -2,8 +2,6 @@
 
 *Disclaimer: This is an evolving project*
 
-A starting point for all my personal/work-related projects using Sass. Do what you'd like with it :)
-
 A starter toolkit based on [Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS) for [Sass](http://sass-lang.com/) (SCSS) projects. Do what you'd like with it :)
 
 Styles are broken down into the following groups: **Base, Layout, Module, State, Theme**
