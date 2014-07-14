@@ -14,15 +14,15 @@ Styles are broken down into the following groups: **Base, Layout, Module, State,
 ## Directory structure
 
 ```
-  + scss/  
-  |  
-  | + base/                # reset, typography, site-wide  
-  |   |-- _index.scss      # imports for all base styles  
-  |   |-- _base.scss       # base styles  
-  |   |-- _normalize.scss  # normalize reset  
-  |  
-  | + layout/              # major components, e.g., header, footer etc.  
-  |   |-- _index.scss      # imports for all layout styles  
+  + scss/
+  |
+  | + base/                # reset, typography, site-wide
+  |   |-- _index.scss      # imports for all base styles
+  |   |-- _base.scss       # base styles
+  |   |-- _normalize.scss  # normalize reset
+  |
+  | + layout/              # major components, e.g., header, footer etc.
+  |   |-- _index.scss      # imports for all layout styles
   |
   | + modules/             # minor components, e.g., buttons, widgets etc.
   |   |-- _index.scss      # imports for all modules
@@ -33,9 +33,6 @@ Styles are broken down into the following groups: **Base, Layout, Module, State,
   |   |-- _print.scss      # print styles
   |   |-- _touch.scss      # touch styles
   |
-  | + themes/              # alternative themes (optional)
-  |   |-- _index.scss      # imports for all themes
-  |
   | + utilities/           # non-CSS outputs (i.e. mixins, variables) & non-modules
   |   |-- _index.scss      # imports for all mixins + global project variables
   |   |-- _fonts.scss      # @font-face mixins
@@ -43,7 +40,6 @@ Styles are broken down into the following groups: **Base, Layout, Module, State,
   |   |-- _global.scss     # global variables
   |   |-- _helpers.scss    # placeholder helper classes
   |   |-- _mixins.scss     # media queries, CSS3, etc.
-  |
   |   |-- _lib.scss        # imports for third party styles
   |   |-- + lib/           # third party styles
   |
