@@ -45,6 +45,7 @@ Styles are broken down into the following groups: **Base, Layout, Module, State,
   |
   |   + ie.scss            # IE specific Sass file
   |   + style.scss         # primary Sass file
+  |   + theme.scss         # separate theme imports
   |   + _shame.scss        # because hacks happen
   |
   + .htaccess              # Apache server configs
