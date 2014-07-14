@@ -233,3 +233,18 @@
   background: $color;
   background: rgba($color, $percent);
 }
+
+// ============================================================
+// = SMACSS Themeing
+// ============================================================
+
+// @example
+// .foobar {
+//   @include theme($beccapurple){ ... }
+// }
+
+@mixin theme($name) {
+  @if $theme == $name {
+     @content;
+  }
+}
