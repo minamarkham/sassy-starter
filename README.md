@@ -1,14 +1,14 @@
-# SMACSS Your Sass Up
+# Sassy Starter
 
 *Disclaimer: This is an evolving project*
 
 A starter toolkit based on [Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS) for [Sass](http://sass-lang.com/) (SCSS) projects. Do what you'd like with it :)
 
-Styles are broken down into the following groups: **Base, Layout, Module, State, Theme**
+Styles are broken down into the following groups: **Base, Layout, Modules, States, Themes**
 
 ## Quick start
 
-1. Fork/Clone the git repo – `git clone https://github.com/minamarkham/sassy-starter` or download zip file directly.
+1. Fork & clone the git repo, or download zip file directly.
 2. Install Sass 3.3 – `gem install sass`.
 3. Watch for changes - 'sass -r sass-globbing --watch sass_dir:css_dir'
 
@@ -49,7 +49,7 @@ Styles are broken down into the following groups: **Base, Layout, Module, State,
   |       | ...
   |
   |   + ie.scss             # IE specific Sass file
-  |   + style.scss          # primary Sass file
+  |   + styles.scss         # primary Sass file
   |   + _shame.scss         # because hacks happen
   |
   + .htaccess               # Apache server configs
