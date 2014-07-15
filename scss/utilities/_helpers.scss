@@ -15,21 +15,21 @@
   &:after { clear: both; }
 }
 
-/*
- * Image replacement
- */
+// ==========================================================================
+// Image replacement
+// ==========================================================================
 
-%ir { 
+%ir {
   background-color: transparent;
   border: 0;
   overflow: hidden;/* IE 6/7 fallback */
   *text-indent: -9999px;
-  &:before { 
+  &:before {
     content: "";
     display: block;
     width: 0;
     height: 150%;
-  } 
+  }
 }
 
 %no-bullets {
@@ -41,7 +41,7 @@
 
 // make sure container is [position: relative]
 // http://codepen.io/shshaw/full/gEiDt
-%absolute-center { 
+%absolute-center {
   width: 50%;
   height: 50%;
   overflow: auto;

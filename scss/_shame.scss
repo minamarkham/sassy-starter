@@ -4,12 +4,12 @@
 // Thanks https://github.com/heroheman/shepherd/blob/master/sass/_shame.scss
 // ==========================================================================
 
-/**
- * because hacks happen.
- *
- * be very specific about what each piece of code is doing, and
- * how to better fix it later
- */
+// ==========================================================================
+// because hacks happen.
+//
+// be very specific about what each piece of code is doing, and
+// how to better fix it later
+// ==========================================================================
 
 // Try:  $ git blame _shame.scss
 
@@ -28,11 +28,11 @@
 // Example:
 // ---------------
    // Nav specificity fix.
-   
+
    // Someone used an ID in the header code (`#header a{}`) which trumps the
    // nav selectors (`.site-nav a{}`). Use !important to override it until I
    // have time to refactor the header stuff.
-   
+
    // .site-nav a{
    //     color:#BADA55!important;
    // }
