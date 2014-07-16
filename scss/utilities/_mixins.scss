@@ -240,7 +240,7 @@
 
 // @example
 // .foobar {
-//   @include theme($beccapurple){ ... }
+//   @include theme(beccapurple){ ... }
 // }
 
 @mixin theme($name) {
