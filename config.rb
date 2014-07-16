@@ -10,6 +10,10 @@
 # Github:   https://github.com/example
 # require 'example'
 
+# Plugin:   Sass Globbing
+# Github:   https://github.com/chriseppstein/sass-globbing
+require 'sass-globbing'
+
 # Config
 # ======
 
