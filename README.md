@@ -10,7 +10,7 @@ Styles are broken down into the following groups: **Base, Layout, Modules, State
 
 1. Fork & clone the git repo, or download zip file directly.
 2. Install Sass 3.3 – `gem install sass`.
-3. Watch for changes - 'sass -r sass-globbing --watch sass_dir:css_dir'
+3. Watch for changes - `sass -r sass-globbing --watch sass_dir:css_dir`.
 
 ## Directory structure
 
