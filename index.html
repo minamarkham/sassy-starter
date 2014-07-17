@@ -44,43 +44,6 @@
       
     
   
-
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
-    
-      
-      
-    
-  
     
       
       
@@ -127,6 +90,43 @@
       
       
     
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+
   
     
       
@@ -170,7 +170,7 @@
   
   <meta charset="utf-8" />
 
-<title>SassDoc</title>
+<title>Sassy Starter - v0.1.0</title>
 <link rel="stylesheet" href="assets/css/main.css" />
 <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700'>
 <meta name="viewport" content="width=device-width">
@@ -191,7 +191,7 @@
   <div class="container">
     <h1 class="header__title">
       
-        SassDoc
+        <a href="https://github.com/minamarkham/sassy-starter/">Sassy Starter - v0.1.0</a>
       
     </h1>
     <p class="header__item-count">30 items documented</p>
@@ -212,84 +212,6 @@
   
 
     
-    
-
-      
-      
-
-      
-      
-
-        <li class="sidebar__sub-heading"><a href="#function">Functions</a></li>
-          
-        
-        
-
-          
-          <li>
-            <a href="#function-em">em</a> 
-            
-            
-          </li>
-
-        
-
-          
-          <li>
-            <a href="#function-rem">rem</a> 
-            
-            
-          </li>
-
-        
-
-          
-          <li>
-            <a href="#function-px">px</a> 
-            
-            
-          </li>
-
-        
-
-          
-          <li>
-            <a href="#function-aspect-ratio">aspect-ratio</a> 
-            
-            
-          </li>
-
-        
-
-          
-          <li>
-            <a href="#function-aspect-ratio-fixed">aspect-ratio-fixed</a> 
-            
-            
-          </li>
-
-        
-
-          
-          <li>
-            <a href="#function-context-calc">context-calc</a> 
-            
-            
-          </li>
-
-        
-
-          
-          <li>
-            <a href="#function-strip-unit">strip-unit</a> 
-            
-            
-          </li>
-
-        
-
-      
-
     
 
       
@@ -529,10 +451,94 @@
 
     
 
+      
+      
+
+      
+      
+
+        <li class="sidebar__sub-heading"><a href="#function">Functions</a></li>
+          
+        
+        
+
+          
+          <li>
+            <a href="#function-em">em</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-rem">rem</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-px">px</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-aspect-ratio">aspect-ratio</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-aspect-ratio-fixed">aspect-ratio-fixed</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-context-calc">context-calc</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-strip-unit">strip-unit</a> 
+            
+            
+          </li>
+
+        
+
+      
+
+    
+
   
   </ul>
 </div>
 
+
+  <h2 class="sidebar__heading">Sassy Starter</h2>
+
+  <div class="sidebar__description">
+    <p>A starter toolkit based on Scalable and Modular Architecture for CSS (SMACSS) for Sass (SCSS) projects</p>
+  </div>
 
 
     </aside>
@@ -545,1165 +551,6 @@
   
 
     
-    
-
-      
-      
-
-      
-      
-        <section class="main__section">
-          <h1 class="main__heading" id="function">Functions</h1>
-
-          
-          
-
-            
-            
-            
-            <section class="main__item  item" id="function-em">
-              <h2 class="item__heading">
-  
-
-  <a class="item__name" href="#function-em">em</a>
-
-  
-
-  
-
-  
-</h2>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code"><code class="language-scss">@function em($target, $context: $base-font-size) { ... }</code></pre>
-
-
-
-  
-  
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>px to em conversion</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$target</code></td>
-          <td data-label="desc"><p>size to convert</p></td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$context</code></td>
-          <td data-label="desc"><p>context conversion is based on</p></td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            <code>$base-font-size</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-  <h3 class="item__sub-heading">Returns</h3>
-  <p class="sassdoc__item-description">
-  
-    Number
-  
-  </p>
-
-
-  
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-    <pre class="item__example"><code class="language-scss">padding-bottom: em(30);</code></pre>
-  
-
-
-  
-
-  
-
-
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    <li><a href="#variable-base-font-size"><code>base-font-size</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-
-  
-
-
-
-
-
-
-  	
-
-  
-  <h3 class="item__sub-heading">Links</h3>
-
-  <ul class="list-unstyled">
-  
-    <li>
-      <a href="http://www.pjmccormick.com/sweet-sass-function-convert-px-em">
-        
-          http://www.pjmccormick.com/sweet-sass-function-convert-px-em
-        
-      </a>
-    </li>
-  
-  </ul>
-
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>scss/utilities/_functions.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="function-rem">
-              <h2 class="item__heading">
-  
-
-  <a class="item__name" href="#function-rem">rem</a>
-
-  
-
-  
-
-  
-</h2>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code"><code class="language-scss">@function rem($target, $context: $base-font-size) { ... }</code></pre>
-
-
-
-  
-  
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>px to rem</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$target</code></td>
-          <td data-label="desc"><p>size to convert</p></td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$context</code></td>
-          <td data-label="desc"><p>context conversion is based on</p></td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            <code>$base-font-size</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-  <h3 class="item__sub-heading">Returns</h3>
-  <p class="sassdoc__item-description">
-  
-    Number
-  
-  </p>
-
-
-  
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-    <pre class="item__example"><code class="language-scss">padding-bottom: rem(30);</code></pre>
-  
-
-
-  
-
-  
-
-
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    <li><a href="#variable-base-font-size"><code>base-font-size</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-
-  
-
-
-
-
-
-
-  	
-
-  
-  <h3 class="item__sub-heading">Links</h3>
-
-  <ul class="list-unstyled">
-  
-    <li>
-      <a href="http://www.pjmccormick.com/sweet-sass-function-convert-px-em">
-        
-          http://www.pjmccormick.com/sweet-sass-function-convert-px-em
-        
-      </a>
-    </li>
-  
-  </ul>
-
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>scss/utilities/_functions.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="function-px">
-              <h2 class="item__heading">
-  
-
-  <a class="item__name" href="#function-px">px</a>
-
-  
-
-  
-
-  
-</h2>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code"><code class="language-scss">@function px($target, $context: $base-font-size) { ... }</code></pre>
-
-
-
-  
-  
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>em to px conversion</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$target</code></td>
-          <td data-label="desc"><p>size to convert</p></td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$context</code></td>
-          <td data-label="desc"><p>context conversion is based on</p></td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            <code>$base-font-size</code>
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-  <h3 class="item__sub-heading">Returns</h3>
-  <p class="sassdoc__item-description">
-  
-    Number
-  
-  </p>
-
-
-  
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-    <pre class="item__example"><code class="language-scss">padding-bottom: px(30);</code></pre>
-  
-
-
-  
-
-  
-
-
-  
-    
-      
-      <h3 class="item__sub-heading">Requires</h3>
-      <ul class="list-unstyled">
-    
-
-    <li><a href="#variable-base-font-size"><code>base-font-size</code></a></li>
-  
-
-
-
-
-</ul>
-
-
-
-  
-
-
-
-
-
-
-  	
-
-  
-  <h3 class="item__sub-heading">Links</h3>
-
-  <ul class="list-unstyled">
-  
-    <li>
-      <a href="http://www.pjmccormick.com/sweet-sass-function-convert-px-em">
-        
-          http://www.pjmccormick.com/sweet-sass-function-convert-px-em
-        
-      </a>
-    </li>
-  
-  </ul>
-
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>scss/utilities/_functions.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="function-aspect-ratio">
-              <h2 class="item__heading">
-  
-
-  <a class="item__name" href="#function-aspect-ratio">aspect-ratio</a>
-
-  
-
-  
-
-  
-</h2>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code"><code class="language-scss">@function aspect-ratio($ratio-numerator, $ratio-denominator) { ... }</code></pre>
-
-
-
-  
-  
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Aspect Ratio</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$ratio-numerator</code></td>
-          <td data-label="desc"><p>ratio numerator</p></td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$ratio-denominator</code></td>
-          <td data-label="desc"><p>ratio denominator</p></td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-  <h3 class="item__sub-heading">Returns</h3>
-  <p class="sassdoc__item-description">
-  
-    Number
-  
-  </p>
-
-
-  
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-    <pre class="item__example"><code class="language-scss">padding-bottom: aspect-ratio(16,9); // @returns 56.25%</code></pre>
-  
-
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  	
-
-  
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>scss/utilities/_functions.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="function-aspect-ratio-fixed">
-              <h2 class="item__heading">
-  
-
-  <a class="item__name" href="#function-aspect-ratio-fixed">aspect-ratio-fixed</a>
-
-  
-
-  
-
-  
-</h2>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code"><code class="language-scss">@function aspect-ratio-fixed($w, $h) { ... }</code></pre>
-
-
-
-  
-  
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Aspect Ratio<br>Based on Fixed Image Dimensions</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$w</code></td>
-          <td data-label="desc"><p>image width</p></td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$h</code></td>
-          <td data-label="desc"><p>image height</p></td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-  <h3 class="item__sub-heading">Returns</h3>
-  <p class="sassdoc__item-description">
-  
-    Number
-  
-  </p>
-
-
-  
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-    <pre class="item__example"><code class="language-scss">padding: 0 0 aspect-ratio-fixed(1080, 720); // @returns 66.666666666667%</code></pre>
-  
-
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  	
-
-  
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>scss/utilities/_functions.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="function-context-calc">
-              <h2 class="item__heading">
-  
-
-  <a class="item__name" href="#function-context-calc">context-calc</a>
-
-  
-
-  
-
-  
-</h2>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code"><code class="language-scss">@function context-calc($target, $context) { ... }</code></pre>
-
-
-
-  
-  
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Context Calculator</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$target</code></td>
-          <td data-label="desc">&mdash;</td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;
-          
-          </td>
-        </tr>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$context</code></td>
-          <td data-label="desc">&mdash;</td>
-          <td data-label="type">
-          
-            Number
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-  <h3 class="item__sub-heading">Returns</h3>
-  <p class="sassdoc__item-description">
-  
-    Number
-  
-  </p>
-
-
-  
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-    <pre class="item__example"><code class="language-scss">padding-bottom: context-calc(30,15);</code></pre>
-  
-
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  	
-
-  
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>scss/utilities/_functions.scss</code></p>
-
-
-
-
-            </section>
-
-          
-
-            
-            
-            
-            <section class="main__item  item" id="function-strip-unit">
-              <h2 class="item__heading">
-  
-
-  <a class="item__name" href="#function-strip-unit">strip-unit</a>
-
-  
-
-  
-
-  
-</h2>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-<pre class="item__code"><code class="language-scss">@function strip-unit($num) { ... }</code></pre>
-
-
-
-  
-  
-  
-  <h3 class="item__sub-heading">Description</h3>
-  
-  <div class="item__description"><p>Strip Unit Values</p></div>
-
-
-  <h3 class="item__sub-heading">Parameters</h3>
-
-
-
-  <table class="item__parameters">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-        <tr class="item__parameter">
-          <td data-label="name"><code>$num</code></td>
-          <td data-label="desc">&mdash;</td>
-          <td data-label="type">
-          
-            String
-          
-          </td>
-          <td data-label="default">
-          
-            &mdash;
-          
-          </td>
-        </tr>
-      
-    </tbody>
-  </table>
-
-
-
-  
-  <h3 class="item__sub-heading">Returns</h3>
-  <p class="sassdoc__item-description">
-  
-    Number
-  
-  </p>
-
-
-  
-  <h3 class="item__sub-heading">Example</h3>
-
-  
-    <pre class="item__example"><code class="language-scss">padding-bottom: strip-unit(30px);</code></pre>
-  
-
-
-  
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  	
-
-  
-  <h3 class="item__sub-heading">Links</h3>
-
-  <ul class="list-unstyled">
-  
-    <li>
-      <a href="http://hugogiraudel.com/2013/08/12/sass-functions">
-        
-          http://hugogiraudel.com/2013/08/12/sass-functions
-        
-      </a>
-    </li>
-  
-  </ul>
-
-
-  
-
-  
-  <h3 class="item__sub-heading">Found at</h3>
-
-  <p><code>scss/utilities/_functions.scss</code></p>
-
-
-
-
-            </section>
-
-          
-        </section>
-
-      
-
     
 
       
@@ -2834,16 +1681,16 @@
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$name</code></td>
+          <th scope="row" data-label="name"><code>$name</code></th>
           <td data-label="desc"><p>theme name</p></td>
           <td data-label="type">
           
@@ -2852,7 +1699,7 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
@@ -2868,7 +1715,12 @@
   <h3 class="item__sub-heading">Example</h3>
 
   
-    <pre class="item__example"><code class="language-scss"> @include theme(beccapurple){ ... }</code></pre>
+    <pre class="item__example"><code class="language-scss">.foobar {
+  background: #ff3377;
+  @include theme(beccapurple){
+    background: #663399;
+  }
+}</code></pre>
   
 
 
@@ -2966,16 +1818,16 @@
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$color-background</code></td>
+          <th scope="row" data-label="name"><code>$color-background</code></th>
           <td data-label="desc"><p>background color</p></td>
           <td data-label="type">
           
@@ -2984,13 +1836,13 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$color-text</code></td>
+          <th scope="row" data-label="name"><code>$color-text</code></th>
           <td data-label="desc"><p>text color</p></td>
           <td data-label="type">
           
@@ -3125,16 +1977,16 @@
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$breakpoint</code></td>
+          <th scope="row" data-label="name"><code>$breakpoint</code></th>
           <td data-label="desc"><p>breakpoint</p></td>
           <td data-label="type">
           
@@ -3143,13 +1995,13 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$query</code></td>
+          <th scope="row" data-label="name"><code>$query</code></th>
           <td data-label="desc"><p>query type</p></td>
           <td data-label="type">
           
@@ -3164,7 +2016,7 @@
         </tr>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$type</code></td>
+          <th scope="row" data-label="name"><code>$type</code></th>
           <td data-label="desc"><p>media type</p></td>
           <td data-label="type">
           
@@ -3411,16 +2263,16 @@
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$footer_height</code></td>
+          <th scope="row" data-label="name"><code>$footer_height</code></th>
           <td data-label="desc"><p>height of footer including padding or borders</p></td>
           <td data-label="type">
           
@@ -3429,13 +2281,13 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$root_selector</code></td>
+          <th scope="row" data-label="name"><code>$root_selector</code></th>
           <td data-label="desc"><p>main wrapper element</p></td>
           <td data-label="type">
           
@@ -3450,7 +2302,7 @@
         </tr>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$root_footer_selector</code></td>
+          <th scope="row" data-label="name"><code>$root_footer_selector</code></th>
           <td data-label="desc"><p>hidden element that &quot;pushes&quot; down the footer</p></td>
           <td data-label="type">
           
@@ -3465,7 +2317,7 @@
         </tr>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$footer_selector</code></td>
+          <th scope="row" data-label="name"><code>$footer_selector</code></th>
           <td data-label="desc"><p>footer element</p></td>
           <td data-label="type">
           
@@ -3683,17 +2535,17 @@
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$opacity</code></td>
-          <td data-label="desc">&mdash;</td>
+          <th scope="row" data-label="name"><code>$opacity</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
           <td data-label="type">
           
             Number
@@ -3701,7 +2553,7 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
@@ -3801,17 +2653,17 @@
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$alignment</code></td>
-          <td data-label="desc">&mdash;</td>
+          <th scope="row" data-label="name"><code>$alignment</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
           <td data-label="type">
           
             String
@@ -3955,16 +2807,16 @@
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$image</code></td>
+          <th scope="row" data-label="name"><code>$image</code></th>
           <td data-label="desc"><p>image url</p></td>
           <td data-label="type">
           
@@ -3973,13 +2825,13 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$width</code></td>
+          <th scope="row" data-label="name"><code>$width</code></th>
           <td data-label="desc"><p>image width</p></td>
           <td data-label="type">
           
@@ -3988,13 +2840,13 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$height</code></td>
+          <th scope="row" data-label="name"><code>$height</code></th>
           <td data-label="desc"><p>image height</p></td>
           <td data-label="type">
           
@@ -4003,7 +2855,7 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
@@ -4115,17 +2967,17 @@
   <table class="item__parameters">
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Type</th>
-        <th>Default value</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
       </tr>
     </thead>
     <tbody>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$color</code></td>
-          <td data-label="desc">&mdash;</td>
+          <th scope="row" data-label="name"><code>$color</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
           <td data-label="type">
           
             String
@@ -4133,14 +2985,14 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
       
         <tr class="item__parameter">
-          <td data-label="name"><code>$percent</code></td>
-          <td data-label="desc">&mdash;</td>
+          <th scope="row" data-label="name"><code>$percent</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
           <td data-label="type">
           
             String
@@ -4148,7 +3000,7 @@
           </td>
           <td data-label="default">
           
-            &mdash;
+            &mdash;<span class="visually-hidden"> none</span>
           
           </td>
         </tr>
@@ -4206,6 +3058,1165 @@
 
     
 
+      
+      
+
+      
+      
+        <section class="main__section">
+          <h1 class="main__heading" id="function">Functions</h1>
+
+          
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-em">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-em">em</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function em($target, $context: $base-font-size) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>px to em conversion</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$target</code></th>
+          <td data-label="desc"><p>size to convert</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$context</code></th>
+          <td data-label="desc"><p>context conversion is based on</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$base-font-size</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: em(30); }</code></pre>
+  
+
+
+  
+
+  
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#variable-base-font-size"><code>base-font-size</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://www.pjmccormick.com/sweet-sass-function-convert-px-em">
+        
+          http://www.pjmccormick.com/sweet-sass-function-convert-px-em
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-rem">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-rem">rem</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function rem($target, $context: $base-font-size) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>px to rem</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$target</code></th>
+          <td data-label="desc"><p>size to convert</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$context</code></th>
+          <td data-label="desc"><p>context conversion is based on</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$base-font-size</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: rem(30); }</code></pre>
+  
+
+
+  
+
+  
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#variable-base-font-size"><code>base-font-size</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://www.pjmccormick.com/sweet-sass-function-convert-px-em">
+        
+          http://www.pjmccormick.com/sweet-sass-function-convert-px-em
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-px">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-px">px</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function px($target, $context: $base-font-size) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>em to px conversion</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$target</code></th>
+          <td data-label="desc"><p>size to convert</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$context</code></th>
+          <td data-label="desc"><p>context conversion is based on</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$base-font-size</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: px(30); }</code></pre>
+  
+
+
+  
+
+  
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#variable-base-font-size"><code>base-font-size</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://www.pjmccormick.com/sweet-sass-function-convert-px-em">
+        
+          http://www.pjmccormick.com/sweet-sass-function-convert-px-em
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-aspect-ratio">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-aspect-ratio">aspect-ratio</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function aspect-ratio($ratio-numerator, $ratio-denominator) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Aspect Ratio</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$ratio-numerator</code></th>
+          <td data-label="desc"><p>ratio numerator</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$ratio-denominator</code></th>
+          <td data-label="desc"><p>ratio denominator</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: aspect-ratio(16,9); } // @returns 56.25%</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-aspect-ratio-fixed">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-aspect-ratio-fixed">aspect-ratio-fixed</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function aspect-ratio-fixed($w, $h) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Aspect Ratio<br>Based on Fixed Image Dimensions</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$w</code></th>
+          <td data-label="desc"><p>image width</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$h</code></th>
+          <td data-label="desc"><p>image height</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding: 0 0 aspect-ratio-fixed(1080, 720); } // @returns 66.666666666667%</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-context-calc">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-context-calc">context-calc</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function context-calc($target, $context) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Context Calculator</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$target</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$context</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: context-calc(30,15); }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-strip-unit">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-strip-unit">strip-unit</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function strip-unit($num) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Strip Unit Values</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$num</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: strip-unit(30px); }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://hugogiraudel.com/2013/08/12/sass-functions">
+        
+          http://hugogiraudel.com/2013/08/12/sass-functions
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+        </section>
+
+      
+
+    
+
   
 
 
@@ -4221,13 +4232,21 @@
         <div class="footer__project-info  project-info">
           <!-- Name and URL -->
           
-            <span class="project-info__name">SassDoc</span>
+            <a class="project-info__name" href="https://github.com/minamarkham/sassy-starter/">Sassy Starter</a>
           
 
           <!-- Version -->
-          
+          <span class="project-info__version"> - v0.1.0</span>
 
           <!-- License -->
+          
+          <span class="project-info__license">, under
+            
+              
+                <a href="http://opensource.org/licenses/MIT">MIT</a>
+              
+            
+            </span>
           
         </div>
       
