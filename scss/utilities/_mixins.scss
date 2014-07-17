@@ -4,11 +4,28 @@
 // https://github.com/sutter/POPY-Starter-integration-web/blob/master/scss/tools/_mixins.scss
 // ==========================================================================
 
-// ============================================================
-// = Buttons
-// ============================================================
-// This customises your buttons with a different background color and text color.
-// If no text color is specified it will default to white.
+/**
+ * SMACSS Theming
+ * @example scss
+ *  @include theme(beccapurple){ ... }
+ * @param {String} $name - theme name
+ */
+
+@mixin theme($name) {
+  @if $theme == $name {
+     @content;
+  }
+}
+
+/**
+ * Buttons
+ * This customises your buttons with a different background color and text color.
+ * If no text color is specified it will default to white.
+ * @param {String} $color-background - background color
+ * @param {String} $color-text (#fff) - text color
+ * @example scss
+ * .foobar { @include btn(#f37) { ... } }
+ */
 
 @mixin btn($color-background, $color-text: #fff) {
   background-color: $color-background;
@@ -16,14 +33,16 @@
   color: $color-text;
 }
 
-// ============================================================
-// = Media Queries
-// ============================================================
-// Allows you to use inline media queries.
-// @see http://jakearchibald.github.com/sass-ie/
-
-// @example
-// .foobar { @include mq(20em) { ... } }
+/**
+ * Media Queries
+ * Allows you to use inline media queries.
+ * @link http://jakearchibald.github.com/sass-ie/
+ * @param {String} $breakpoint - breakpoint
+ * @param {String} $query (min-width) - query type
+ * @param {String} $type (screen) - media type
+ * @example scss
+ * .foobar { @include mq(20em) { ... } }
+ */
 
 @mixin mq($breakpoint, $query: 'min-width', $type: 'screen') { // breakpoint can be a variable
   // if media queries are not supported
@@ -38,15 +57,14 @@
   }
  }
 
-// ============================================================
-// = IE Specific Styles
-// ============================================================
-
-// @example
-// .foobar {
-//   .lt-ie8 & { @include old-ie { ... } }
-//   .lt-ie9 & { @include old-ie { ... } }
-// }
+/**
+ * IE Specific Styles
+ * @example scss
+ * .foobar {
+ *   .lt-ie8 & { @include old-ie { ... } }
+ *   .lt-ie9 & { @include old-ie { ... } }
+ * }
+ */
 
 @mixin old-ie {
   @if $old-ie {
@@ -54,9 +72,17 @@
   }
 }
 
-// ============================================================
-// = Sticky Footer
-// ============================================================
+/**
+ * Sass version of Sticky Footer by Ryan Fait
+ * @link http://ryanfait.com/sticky-footer/
+ * @param {String} $footer_height - height of footer including padding or borders
+ * @param {String} $root_selector (.site) - main wrapper element
+ * @param {String} $root_footer_selector (.push) - hidden element that "pushes" down the footer
+ * @param {String} $footer_selector (footer) - footer element
+ * @example scss
+ * .foobar { @include sticky-footer(4em) { ... } }
+ */
+
 @mixin sticky-footer($footer_height, $root_selector:".site", $root_footer_selector:".push", $footer_selector:"footer") {
   html, body {height: 100%;}
   #{$root_selector} {
@@ -76,9 +102,13 @@
   }
 }
 
-// ============================================================
-// = Fullscreen Background for < IE8
-// ============================================================
+/**
+ * Fullscreen Background for < IE8
+ * @link http://css-tricks.com/perfect-full-page-background-image/
+ * @example scss
+ * .foobar { @include fullscreen-bg() { ... } }
+ */
+
 @mixin fullscreen-bg() {
   position: fixed;
   top: -50%;
@@ -97,9 +127,11 @@
   }
 }
 
-// ============================================================
-// = Opacity
-// ============================================================
+/**
+ * @param {number} $opacity
+ * @example scss
+ * .foobar { @include opacity(4) { ... } }
+ */
 @mixin opacity($opacity) {
   filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
   opacity: $opacity;
@@ -111,89 +143,13 @@
   }
 }
 
-// ============================================================
-// = Transition
-// ============================================================
-@mixin transition ($transition : all .3s ease-in-out) {
-  @include prefixer(transition, $transition, webkit moz ms o spec);
-}
-
-// ============================================================
-// = Box-sizing
-// ============================================================
-@mixin box-sizing ($box : border-box) {
-  //  content-box | border-box | inherit
-  @include prefixer(box-sizing, $box, webkit moz spec);
-}
-
-// ============================================================
-// = Transform
-// ============================================================
-@mixin transform($property: none) {
-  @include prefixer(transform, $property, webkit moz ms o spec);
-}
-
-@mixin transform-origin($axes: 50%) {
-  @include prefixer(transform-origin, $axes, webkit moz ms o spec);
-}
-
-@mixin transform-style ($style: flat) {
-  @include prefixer(transform-style, $style, webkit moz ms o spec);
-}
-
-// ============================================================
-// = Keyframes
-// ============================================================
-@mixin keyframes($name) {
-  $original-prefix-for-webkit:    $prefix-for-webkit;
-  $original-prefix-for-mozilla:   $prefix-for-mozilla;
-  $original-prefix-for-microsoft: $prefix-for-microsoft;
-  $original-prefix-for-opera:     $prefix-for-opera;
-  $original-prefix-for-spec:      $prefix-for-spec;
-
-  @if $original-prefix-for-webkit {
-    @include disable-prefix-for-all();
-    $prefix-for-webkit: true;
-    @-webkit-keyframes #{$name} {
-        @content;
-    }
-  }
-  @if $original-prefix-for-mozilla {
-    @include disable-prefix-for-all();
-    $prefix-for-mozilla: true;
-    @-moz-keyframes #{$name} {
-        @content;
-    }
-  }
-  @if $original-prefix-for-spec {
-    @include disable-prefix-for-all();
-    $prefix-for-spec: true;
-    @keyframes #{$name} {
-        @content;
-    }
-  }
-
-  $prefix-for-webkit:    $original-prefix-for-webkit   ;
-  $prefix-for-mozilla:   $original-prefix-for-mozilla  ;
-  $prefix-for-microsoft: $original-prefix-for-microsoft;
-  $prefix-for-opera:     $original-prefix-for-opera    ;
-  $prefix-for-spec:      $original-prefix-for-spec     ;
-}
-
-// ============================================================
-// = Calc
-// ============================================================
-@mixin calc($property, $expression) {
-  #{$property}: -moz-calc(#{$expression});
-  #{$property}: -o-calc(#{$expression});
-  #{$property}: -webkit-calc(#{$expression});
-  #{$property}: calc(#{$expression});
-}
-
-// ============================================================
-// Inline Block
-// Custom version of http://bit.ly/thoughtbot-bourbon-inline-block
-// ============================================================
+/**
+ * @link http://bit.ly/thoughtbot-bourbon-inline-block
+ * @require {mixin} old-ie
+ * @param {String} $alignment (baseline)
+ * @example scss
+ * .foobar { @include inline-block() { ... } }
+ */
 
 @mixin inline-block($alignment: baseline) {
   display: inline-block;
@@ -207,9 +163,14 @@
   }
 }
 
-// ============================================================
-// $Retina Displays
-// ============================================================
+/**
+ * Retina Displays
+ * @param {String} $image - image url
+ * @param {String} $width - image width
+ * @param {String} $height - image height
+ * @example scss
+ * .foobar { @include image-2x('img/logo.png', 200px, 300px) { ... } }
+ */
 
 @mixin image-2x($image, $width, $height) {
 
@@ -225,26 +186,15 @@
   }
 }
 
-// ============================================================
-// $RGBA Fallback
-// ============================================================
+/**
+ * RGBA Fallback
+ * @param {String} $color
+ * @param {String} $percent
+ * @example scss
+ * .foobar { @include rgba-bg(#f37,.9) { ... } }
+ */
 
 @mixin rgba-bg($color, $percent) {
   background: $color;
   background: rgba($color, $percent);
-}
-
-// ============================================================
-// = SMACSS Theming
-// ============================================================
-
-// @example
-// .foobar {
-//   @include theme(beccapurple){ ... }
-// }
-
-@mixin theme($name) {
-  @if $theme == $name {
-     @content;
-  }
 }

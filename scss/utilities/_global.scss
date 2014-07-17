@@ -2,17 +2,28 @@
 // = Global Variables
 // ==========================================================================
 
-// CSS layout debugging
-// http://pesticide.io/
-// =============
+/**
+ * CSS layout debugging
+ * @link http://pesticide.io/
+ * @type boolean
+ */
 
 $pesticide-debug              : false;
 
-// Turn off IE specific styles
-// @see http://jakearchibald.github.com/sass-ie/
-// =============
+/**
+ * Define width for browsers w/out media query support
+ * @link http://jakearchibald.github.com/sass-ie/
+ * @type boolean
+ */
 
 $fix-mqs                      : false !default;
+
+/**
+ * Turn on/off IE specific styles
+ * @link http://jakearchibald.github.com/sass-ie/
+ * @type boolean
+ */
+
 $old-ie                       : false !default;
 
 // Color Scheme
@@ -78,29 +89,75 @@ $color-notice                 : #66b;
 // Base Sizes
 // ==========
 
-// Base font size in used in _mixins.scss
-// Included shorthands as these may be used a lot.
+/**
+ * Base font size in used in _mixins.scss
+ * @type number
+ */
 
 $base-font-size               : 16;
+
+/**
+ * Base line-height in used in _mixins.scss
+ * @type number
+ */
+
 $base-line-height             : 24;
-$base-fs                      : $base-font-size;
-$base-lh                      : $base-line-height;
 
 
 // Font Stacks
 // ===========
 
-// $google-fonts-url             : 'http://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Code+Pro';
+/**
+ * (optional) URL for Google Fonts import
+ * @type string
+ */
 
-// $fonts                        : 'FONTNAME', 'FONTNAME', 'FONTNAME', 'FONTNAME';
+// $google-fonts-url          : 'http://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Code+Pro';
+
+/**
+ * (optional) names of webfonts imports
+ * @type array
+ */
+
+// $fonts                     : 'FONTNAME', 'FONTNAME', 'FONTNAME', 'FONTNAME';
+
+/**
+ * define font stack used for sans-serifs
+ * @type string
+ */
 
 $font-family-sans             : 'source-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/**
+ * define font stack used for serifs
+ * @type string
+ */
+
 $font-family-serif            : 'source-serif-pro', Georgia, 'Times New Roman', Times, serif;
+
+/**
+ * define font stack used for monospaced copy
+ * @type string
+ */
+
 $font-family-monospace        : 'source-code-pro','Inconsolata', "Menlo", Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
                                 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
                                 Monaco, 'Courier New', Courier, monospace;
 
+/**
+ * define font stack used for headings
+ * @requires {variable} $font-family-serif
+ * @type string
+ */
+
 $font-family-display          : $font-family-serif;
+
+/**
+ * define font stack used for paragraphs
+ * @requires {variable} font-family-sans
+ * @type string
+ */
+
 $font-family-default          : $font-family-sans;
 
 // Font Weights
@@ -113,9 +170,9 @@ $font-weight-bold             : 900;
 
 
 // Breakpoints
-// ===========
 // There are no common breakpoints; examples based on the official Sass styleguide
 // You'll need to define your own breakpoints to suit your design
+// ============
 
 $mobile-small                 : 240;
 $mobile-large                 : 320;
@@ -124,6 +181,12 @@ $tablet-large                 : 768;
 $screen-small                 : 1024;
 $screen-large                 : 1280;
 
+/**
+ * Define z-indexes for various elements
+ * @link http://www.sitepoint.com/using-sass-maps/
+ * @type number
+ */
+
 // z-index reference
 $zindex: (
   modal                       : 9000,
@@ -131,16 +194,4 @@ $zindex: (
   dropdown                    : 7000,
   header                      : 6000,
   footer                      : 5000
-);
-
-// Susy configurations
-// Requires Susy 2.0.0 or later
-// More info here: http://susydocs.oddbird.net/en/latest/settings/
-
-$susy: (
-  columns                     : 8,
-  column-width                : 3em,
-  gutters                     : 1/3,
-  show-grids                  : show-columns,
-  box-sizing                  : border-box
 );

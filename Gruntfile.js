@@ -1,4 +1,5 @@
 /*
+
     Grunt installation:
     -------------------
     npm install -g grunt-cli
@@ -9,14 +10,60 @@
     --------------------------
     npm install (from the same root directory as the `package.json` file
 
+    Tasks:
+    --------------------------
+    grunt (default is to watch both sass and coffeescript files)
+    grunt sass (compile once)
+    grunt watch (you can also explicitly call the watch task)
+
+    All commands are detailed by running the following:
+    --------------------------
+    grunt --help
+
 */
+
+
 
 module.exports = function(grunt) {
 
-  // project configuration
+  // CONFIG ===================================/
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    // configure concatenation
+
+    // configure sass --> grunt sass
+    sass: {                                       // Task
+      dev: {                                      // Target
+        options: {                                // Target options
+          style: 'expanded'
+        },
+        files: {                                  // Dictionary of files
+          'css/styles.css': 'scss/styles.scss',   // 'destination': 'source'
+          'css/ie.css': 'scss/ie.scss',
+          'css/themes/*.css':'scss/themes/*.scss'
+        }
+      },
+      prod: {                                     // Target
+        options: {                                // Target options
+          style: 'compressed'
+        },
+        files: {                                  // Dictionary of files
+          'css/styles.css': 'scss/styles.scss',   // 'destination': 'source'
+          'css/ie.css': 'scss/ie.scss',
+          'css/themes/*.css':'scss/themes/*.scss'
+        }
+      }
+    },
+
+    // configure sass documentation --> grunt sassdoc
+    sassdoc: {
+      default: {
+        src: 'scss',
+        dest: 'docs'
+      }
+    },
+
+    // configure concatenation --> grunt concat
     concat: {
       dist: {
         src: [
@@ -25,7 +72,8 @@ module.exports = function(grunt) {
         dest: 'js/plugins.js'
       }
     },
-    // configure minification
+
+    // configure minification --> grunt uglify
     uglify: {
       options: {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -37,35 +85,8 @@ module.exports = function(grunt) {
         }
       }
     },
-    // configure sass
-    sass: {
-      dist: {
-        options: {
-            require: [
-              'sass-globbing'
-            ],
-            style: 'compressed'
-        },
-        files: {
-            'css/styles.css': 'scss/styles.scss',
-            'css/ie.css': 'scss/ie.scss'
-        }
-      },
-      dev: {
-        options: {
-            require: [
-              'sass-globbing'
-            ],
-            lineNumbers: true,
-            style: 'expanded'
-        },
-        files: {
-            'css/styles.css': 'scss/styles.scss',
-            'css/ie.css': 'scss/ie.scss'
-        }
-      }
-    },
-    // configure file watching
+
+    // configure file watching --> grunt watch
     watch: {
       scripts: {
         files: ['js/**/*.js'],
@@ -80,9 +101,18 @@ module.exports = function(grunt) {
         options: {
             spawn: false,
         }
+      },
+      docs: {
+        files: ['scss/**/*.scss'],
+        tasks: ['sassdoc'],
+        options: {
+            spawn: false,
+        }
       }
+
     },
-    // configure image optimization
+
+    // configure image optimization --> grunt imagemin
     imagemin: {
       dynamic: {
         files: [{
@@ -92,39 +122,22 @@ module.exports = function(grunt) {
             dest: 'img/build/'
         }]
       }
-    }.
-    jekyll: {                             // Task
-      options: {                          // Universal options
-        bundleExec: true,
-        src : '<%= app %>'
-      },
-      dist: {                             // Target
-        options: {                        // Target options
-          dest: '<%= dist %>',
-          config: '_config.yml,_config.build.yml'
-        }
-      },
-      serve: {                            // Another target
-        options: {
-          dest: '.jekyll',
-          drafts: true
-        }
-      }
     }
   });
 
-  // load all the plugins
+  // DEPENDENT PLUGINS =========================/
+
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sassdoc');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-jekyll');
 
-  // run all the task(s)
+  // TASKS =====================================/
+
   grunt.registerTask( 'default', [ 'watch'] ); // default 'grunt'
-  grunt.registerTask( 'build', [ 'imagemin','sass:dist' ] ); // optimize images, compress css
-  grunt.registerTask( 'jekyll', [ 'jekyll' ]);
+  grunt.registerTask( 'build', [ 'imagemin','sass:prod' ] ); // optimize images, compress css
 
 };
 
