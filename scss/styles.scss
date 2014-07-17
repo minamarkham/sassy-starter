@@ -24,24 +24,6 @@
 // 09. Shame
 
 // ==========================================================================
-// $Sass Globbing Notes
-// http://fuseinteractive.ca/blog/automatic-sass-imports-sass-globbing
-// $ sass -r sass-globbing --watch sass_dir:css_dir
-// ==========================================================================
-
-// @example
-// @import 'dir/*';
-// @import 'dir/**/*';
-
-// All partials inside 'dir' are imported.
-// By default, partials are imported alphabetically.
-// In order to import them in a specific order
-// we can number the partial files like so…
-//
-// _1.layout-small.scss
-// _2.layout-wide.scss
-
-// ==========================================================================
 // $Utilities
 // ==========================================================================
 @import "utilities/index"; // Variables, mixins, grid-system, etc.
@@ -50,9 +32,7 @@
 // $Lib
 // import third-party dependancies
 // ==========================================================================
-
 @import 'utilities/lib';
-@import "utilities/lib/*";
 
 // ==========================================================================
 // $Base
