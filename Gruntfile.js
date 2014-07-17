@@ -22,8 +22,6 @@
 
 */
 
-
-
 module.exports = function(grunt) {
 
   // CONFIG ===================================/
@@ -59,7 +57,10 @@ module.exports = function(grunt) {
     sassdoc: {
       default: {
         src: 'scss',
-        dest: 'docs'
+        dest: 'docs',
+        options: {
+          package: 'package.json'
+        }
       }
     },
 
