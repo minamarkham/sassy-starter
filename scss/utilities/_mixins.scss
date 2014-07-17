@@ -7,7 +7,12 @@
 /**
  * SMACSS Theming
  * @example scss
- *  @include theme(beccapurple){ ... }
+ * .foobar {
+ *   background: #ff3377;
+ *   @include theme(beccapurple){
+ *     background: #663399;
+ *   }
+ * }
  * @param {String} $name - theme name
  */
 
