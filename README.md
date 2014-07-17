@@ -6,11 +6,14 @@ A starter toolkit based on [Scalable and Modular Architecture for CSS](http://sm
 
 Styles are broken down into the following groups: **Base, Layout, Modules, States, Themes**
 
+## Documentation
+See [SassDoc](http://minamarkham.github.io/sassy-starter/docs/).
+
 ## Quick start
 
 1. Fork & clone the git repo, or download zip file directly.
 2. Install Sass 3.3 – `gem install sass`.
-3. Watch for changes - `sass -r sass-globbing --watch sass_dir:css_dir`.
+3. Watch for changes - `sass --watch sass_dir:css_dir`.
 
 ## Directory structure
 
@@ -46,6 +49,7 @@ Styles are broken down into the following groups: **Base, Layout, Modules, State
   |   |-- _mixins.scss      # media queries, CSS3, etc.
   |   |-- _lib.scss         # imports for third party styles
   |   |-- + lib/            # third party styles
+  |       | _pesticide.scss # CSS pesticide
   |       | ...
   |
   |   + ie.scss             # IE specific Sass file
@@ -55,6 +59,7 @@ Styles are broken down into the following groups: **Base, Layout, Modules, State
   + .htaccess               # Apache server configs
   + config.rb               # Compass configuration file
   + crossdomain.xml         # cross-domain requests
+  + docs/                   # SassDoc generated documentation
   + deploy.rb               # Capistrano configuration file
   + Gruntfile.js            # Grunt configuration & tasks
   + package.json            # Grunt metadata & dependencies
