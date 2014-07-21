@@ -69,7 +69,7 @@ See [SassDoc](http://minamarkham.github.io/sassy-starter/).
 
 This toolkit is based on the work of the following fine people & projects.
 
-- [Scalable and Modular Architecture for CSS](http://smacss.com/book/type-state) (<abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr>)
+- [Scalable and Modular Architecture for CSS](http://smacss.com/book) (<abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr>)
 - [Lemanz](https://github.com/grayghostvisuals/lemanz)
 - [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 - [Normalise.css](http://necolas.github.com/normalize.css/)
