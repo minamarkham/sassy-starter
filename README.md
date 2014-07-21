@@ -7,7 +7,7 @@ A starter toolkit based on [Scalable and Modular Architecture for CSS](http://sm
 Styles are broken down into the following groups: **Base, Layout, Modules, States, Themes**
 
 ## Documentation
-See [SassDoc](http://minamarkham.github.io/sassy-starter/).
+See [SassDoc](http://minamarkham.github.io/sassy-starter/docs).
 
 ## Quick start
 
