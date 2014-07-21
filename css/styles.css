@@ -1,0 +1,214 @@
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a{background:0 0}a:focus{outline:dotted thin}a:active,a:hover{outline:0}h1{margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}article,div,footer,header,main,section{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+
+html {
+		font-family: "source sans pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+		color: #484C55;
+		overflow-x: hidden;
+		text-rendering: optimizelegibility;
+		background: url('../img/grey-prism.png') repeat scroll 50% 0px / 50% auto transparent;
+}
+h1 {
+		margin: 0.67em 0px;
+}
+.f1, .f2 {
+		font-size: 1.5em;
+		line-height: 1em;
+		font-weight: 300;
+		letter-spacing: -0.03125em;
+		color: #699;
+}
+
+b {
+		font-weight: 700;
+}
+a{
+	text-decoration:none;
+	-webkit-transition:all .4s;
+	transition:all .4s
+}
+
+a:link{
+	color:#C69;
+}
+
+a:visited{
+	color:#C69
+}
+
+a:hover{
+	color:#036;
+}
+
+a:active{
+	color:#C69
+}
+
+code, code[class*="language-"], pre[class*="language-"] {font-family: 'source code pro', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace}
+
+div, section, main, footer, header { box-sizing: border-box; }
+
+.lh-copy{
+	line-height:1.6
+}
+
+.pvx-m{
+	padding-top:4rem;
+	padding-bottom:4rem
+}
+.pvxl-l{
+	padding-top:8rem;
+	padding-bottom:8rem
+}
+.cf:after,.cf:before{
+	content:" ";
+	display:table
+}
+
+.cf:after{
+	clear:both
+}
+.center{
+	margin:0 auto
+}
+
+.mtn {
+		margin-top: 0px;
+}
+.mbn {
+		margin-bottom: 0px;
+}
+.ttu-ns {
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+}
+.mbl-ns {
+		margin-bottom: 2rem;
+}
+.mts {
+		margin-top: 0.5rem;
+}
+.fw3 {
+		font-weight: 300;
+}
+.fw4 {
+		font-weight: 400;
+}
+.btn {
+	border-style:solid;
+	border-width:2px;
+	font-size: 12px;
+	display:inline-block;
+	margin-bottom:.5em;
+	text-decoration:none;
+	text-transform:uppercase;
+	-webkit-transition:color .4s,background-color .4s,border .4s;
+	transition:color .4s,background-color .4s,border .4s
+}
+
+.btn:hover{
+	color:#C69;
+	border-color:#C69;
+	-webkit-transition:background-color .3s,color .3s,border .3s;
+	transition:background-color .3s,color .3s,border .3s
+}
+.btn--github{transition:all.4s;-webkit-transition:all.4s; background:url(../svg/octocat.svg) no-repeat;background-size:contain;padding-left:2em;}
+.btn--twitter{transition:all.4s;-webkit-transition:all.4s;background:url(../svg/twitter.svg) no-repeat;background-size:contain;padding-left:2em;}
+
+.wi-40-ns {
+		width: 40%;
+}
+.wi-100 {
+		width: 100%;
+}
+.ptl-l {
+		padding-top: 2rem;
+}
+.ptm {
+		padding-top: 1rem;
+}
+.pbl {
+		padding-bottom: 2rem;
+}
+.fl-ns {
+		float: left;
+		display: inline;
+}
+div, section, main, footer, header {
+		box-sizing: border-box;
+}
+.pvl-l {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+}
+.pvl{
+	padding-top:2rem;
+	padding-bottom:2rem
+}
+.pbl {
+		padding-bottom: 2rem;
+}
+.phm {
+		padding-left: 1rem;
+		padding-right: 1rem;
+}
+.center {
+		margin: 0px auto;
+}
+.mw7 {
+		max-width: 48rem;
+}
+.mw8 {
+		max-width: 64rem;
+}
+.serif {
+		font-family: "source serif pro",Georgia,"Times New Roman",Times,serif;
+}
+.man {
+		margin: 0px;
+}
+.wi-100 {
+		width: 100%;
+}
+.wi-40-ns {
+		width: 40%;
+}
+.tr-ns {
+		text-align: right;
+}
+.ptl-l {
+		padding-top: 2rem;
+}
+.ptm {
+		padding-top: 1rem;
+}
+.dib {
+		display: inline-block;
+}
+.prs {
+		padding-right: 0.5rem;
+}
+.mrs {
+		margin-right: 0.5rem;
+}
+.ptl-l {
+		padding-top: 2rem;
+}
+@media screen and (min-width:48em){
+	.fl-ns{
+		float:left;
+		display:inline
+	}
+	.wi-60-ns{
+		width:60%
+	}
+	.tr-ns {
+		text-align: right;
+	}
+}
+.pop-stripe {
+		height: 0.25em;
+		background-image: -moz-linear-gradient(left center , #C69 0%, #C69 8.33333%, #B37399 8.33333%, #B37399 16.6667%, #998099 16.6667%, #998099 25%, #699 25%, #699 33.3333%, #D2E1DD 33.3333%, #D2E1DD 41.6667%, #FFF 41.6667%, #FFF 50%, rgb(242, 236, 228) 50%, rgb(242, 236, 228) 58.3333%, rgb(225, 215, 210) 58.3333%, rgb(225, 215, 210) 66.6667%, rgb(218, 219, 223) 66.6667%, rgb(218, 219, 223) 75%, rgb(128, 140, 153) 75%, rgb(128, 140, 153) 83.3333%, rgb(107, 113, 127) 83.3333%, rgb(107, 113, 127) 91.6667%, rgb(0, 51, 102) 91.6667%, rgb(0, 51, 102) 100%);
+}
+
+main {background: #fff;border-top: 2px solid #C6538C;}

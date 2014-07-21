@@ -1,0 +1,4266 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+    
+      
+      
+    
+  
+
+
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8" />
+
+<title>Sassy Starter - v0.1.0</title>
+<link rel="stylesheet" href="assets/css/main.css" />
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700'>
+<meta name="viewport" content="width=device-width">
+<meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible">
+
+<!-- Thanks to Sass-lang.com for the icons -->
+<link href="http://sass-lang.com/assets/img/ico/apple-touch-icon-144x144-precomposed-e674ce95.png" rel="apple-touch-icon-precomposed" sizes="144x144">
+<link href="http://sass-lang.com/assets/img/ico/apple-touch-icon-114x114-precomposed-19f81edf.png" rel="apple-touch-icon-precomposed" sizes="114x114">
+<link href="http://sass-lang.com/assets/img/ico/apple-touch-icon-72x72-precomposed-363e5ff9.png" rel="apple-touch-icon-precomposed" sizes="72x72">
+<link href="http://sass-lang.com/assets/img/ico/apple-touch-icon-57x57-precomposed-f3752e86.png" rel="apple-touch-icon-precomposed">
+<link href="http://sass-lang.com/assets/img/ico/favicon-0ccd2d9d.png" rel="shortcut icon">
+
+</head>
+<body>
+
+  
+  <header class="header" role="banner">
+  <div class="container">
+    <h1 class="header__title">
+      
+        <a href="https://github.com/minamarkham/sassy-starter/">Sassy Starter - v0.1.0</a>
+      
+    </h1>
+    <p class="header__item-count">30 items documented</p>
+  </div>
+</header>
+
+  
+  <div class="container">
+
+    
+    <aside class="sidebar" role="nav">
+      
+  <h2 class="sidebar__heading">Documentation map</h2>
+
+<div class="sidebar__body">
+  <ul class="list-unstyled">
+  
+  
+
+    
+    
+
+      
+      
+
+      
+      
+
+        <li class="sidebar__sub-heading"><a href="#variable">Variables</a></li>
+          
+        
+        
+
+          
+          <li>
+            <a href="#variable-pesticide-debug">pesticide-debug</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-fix-mqs">fix-mqs</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-old-ie">old-ie</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-base-font-size">base-font-size</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-base-line-height">base-line-height</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-google-fonts-url">google-fonts-url</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-fonts">fonts</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-font-family-sans">font-family-sans</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-font-family-serif">font-family-serif</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-font-family-monospace">font-family-monospace</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-font-family-display">font-family-display</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-font-family-default">font-family-default</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#variable-zindex">zindex</a> 
+            
+            
+          </li>
+
+        
+
+      
+
+    
+
+      
+      
+
+      
+      
+
+        <li class="sidebar__sub-heading"><a href="#mixin">Mixins</a></li>
+          
+        
+        
+
+          
+          <li>
+            <a href="#mixin-theme">theme</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#mixin-btn">btn</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#mixin-mq">mq</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#mixin-old-ie">old-ie</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#mixin-sticky-footer">sticky-footer</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#mixin-fullscreen-bg">fullscreen-bg</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#mixin-opacity">opacity</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#mixin-inline-block">inline-block</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#mixin-image-2x">image-2x</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#mixin-rgba-bg">rgba-bg</a> 
+            
+            
+          </li>
+
+        
+
+      
+
+    
+
+      
+      
+
+      
+      
+
+        <li class="sidebar__sub-heading"><a href="#function">Functions</a></li>
+          
+        
+        
+
+          
+          <li>
+            <a href="#function-em">em</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-rem">rem</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-px">px</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-aspect-ratio">aspect-ratio</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-aspect-ratio-fixed">aspect-ratio-fixed</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-context-calc">context-calc</a> 
+            
+            
+          </li>
+
+        
+
+          
+          <li>
+            <a href="#function-strip-unit">strip-unit</a> 
+            
+            
+          </li>
+
+        
+
+      
+
+    
+
+  
+  </ul>
+</div>
+
+
+  <h2 class="sidebar__heading">Sassy Starter</h2>
+
+  <div class="sidebar__description">
+    <p>A starter toolkit based on Scalable and Modular Architecture for CSS (SMACSS) for Sass (SCSS) projects</p>
+  </div>
+
+
+    </aside>
+
+    
+    <article class="main" role="main">
+      
+
+  
+  
+
+    
+    
+
+      
+      
+
+      
+      
+        <section class="main__section">
+          <h1 class="main__heading" id="variable">Variables</h1>
+
+          
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-pesticide-debug">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-pesticide-debug">pesticide-debug</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$pesticide-debug: false;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>CSS layout debugging</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Boolean</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://pesticide.io/">
+        
+          http://pesticide.io/
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-fix-mqs">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-fix-mqs">fix-mqs</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$fix-mqs: false !default;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Define width for browsers w/out media query support</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Boolean</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://jakearchibald.github.com/sass-ie/">
+        
+          http://jakearchibald.github.com/sass-ie/
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-old-ie">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-old-ie">old-ie</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$old-ie: false !default;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Turn on/off IE specific styles</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Boolean</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://jakearchibald.github.com/sass-ie/">
+        
+          http://jakearchibald.github.com/sass-ie/
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-base-font-size">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-base-font-size">base-font-size</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$base-font-size: 16;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Base font size in used in _mixins.scss</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Number</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#function-em"><code>em</code></a></li>
+  
+
+
+
+  
+  
+    
+
+    <li><a href="#function-rem"><code>rem</code></a></li>
+  
+
+
+
+  
+  
+    
+
+    <li><a href="#function-px"><code>px</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-base-line-height">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-base-line-height">base-line-height</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$base-line-height: 24;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Base line-height in used in _mixins.scss</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Number</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-google-fonts-url">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-google-fonts-url">google-fonts-url</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$google-fonts-url: 'http://fonts.googleapis.com/css?family=Source+Sans+Pro|Source+Code+Pro';</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>(optional) URL for Google Fonts import</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-fonts">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-fonts">fonts</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$fonts: 'FONTNAME', 'FONTNAME', 'FONTNAME', 'FONTNAME';</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>(optional) names of webfonts imports</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Array</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-font-family-sans">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-font-family-sans">font-family-sans</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$font-family-sans: 'source-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>define font stack used for sans-serifs</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#variable-font-family-default"><code>font-family-default</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-font-family-serif">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-font-family-serif">font-family-serif</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$font-family-serif: 'source-serif-pro', Georgia, 'Times New Roman', Times, serif;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>define font stack used for serifs</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+  
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#variable-font-family-display"><code>font-family-display</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-font-family-monospace">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-font-family-monospace">font-family-monospace</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$font-family-monospace: 'source-code-pro','Inconsolata', "Menlo", Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
+                                'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
+                                Monaco, 'Courier New', Courier, monospace;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>define font stack used for monospaced copy</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-font-family-display">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-font-family-display">font-family-display</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$font-family-display: $font-family-serif;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>define font stack used for headings</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+
+  
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#variable-font-family-serif"><code>font-family-serif</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-font-family-default">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-font-family-default">font-family-default</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$font-family-default: $font-family-sans;</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>define font stack used for paragraphs</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>String</code>
+  
+  </p>
+
+
+  
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#variable-font-family-sans"><code>font-family-sans</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="variable-zindex">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-zindex">zindex</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+<pre class="item__code"><code class="language-scss">$zindex: (
+  modal                       : 9000,
+  overlay                     : 8000,
+  dropdown                    : 7000,
+  header                      : 6000,
+  footer                      : 5000
+);</code></pre>
+
+  
+
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Define z-indexes for various elements</p></div>
+
+
+  
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Number</code>
+  
+  </p>
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://www.sitepoint.com/using-sass-maps/">
+        
+          http://www.sitepoint.com/using-sass-maps/
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_global.scss</code></p>
+
+
+
+
+            </section>
+
+          
+        </section>
+
+      
+
+    
+
+      
+      
+
+      
+      
+        <section class="main__section">
+          <h1 class="main__heading" id="mixin">Mixins</h1>
+
+          
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-theme">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-theme">theme</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin theme($name) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>SMACSS Theming</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$name</code></th>
+          <td data-label="desc"><p>theme name</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar {
+  background: #ff3377;
+  @include theme(beccapurple){
+    background: #663399;
+  }
+}</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_mixins.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-btn">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-btn">btn</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin btn($color-background, $color-text: #fff) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Buttons<br>This customises your buttons with a different background color and text color.<br>If no text color is specified it will default to white.</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$color-background</code></th>
+          <td data-label="desc"><p>background color</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$color-text</code></th>
+          <td data-label="desc"><p>text color</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>#fff</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { @include btn(#f37) { ... } }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_mixins.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-mq">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-mq">mq</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin mq($breakpoint, $query: min-width, $type: screen) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Media Queries<br>Allows you to use inline media queries.</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$breakpoint</code></th>
+          <td data-label="desc"><p>breakpoint</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$query</code></th>
+          <td data-label="desc"><p>query type</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>min-width</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$type</code></th>
+          <td data-label="desc"><p>media type</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>screen</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { @include mq(20em) { ... } }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://jakearchibald.github.com/sass-ie/">
+        
+          http://jakearchibald.github.com/sass-ie/
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_mixins.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-old-ie">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-old-ie">old-ie</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+<pre class="item__code"><code class="language-scss">@mixin old-ie() { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>IE Specific Styles</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <p>None.</p>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar {
+  .lt-ie8 &amp; { @include old-ie { ... } }
+  .lt-ie9 &amp; { @include old-ie { ... } }
+}</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_mixins.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-sticky-footer">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-sticky-footer">sticky-footer</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin sticky-footer($footer_height, $root_selector: .site, $root_footer_selector: .push, $footer_selector: footer) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Sass version of Sticky Footer by Ryan Fait</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$footer_height</code></th>
+          <td data-label="desc"><p>height of footer including padding or borders</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$root_selector</code></th>
+          <td data-label="desc"><p>main wrapper element</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>.site</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$root_footer_selector</code></th>
+          <td data-label="desc"><p>hidden element that &quot;pushes&quot; down the footer</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>.push</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$footer_selector</code></th>
+          <td data-label="desc"><p>footer element</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>footer</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { @include sticky-footer(4em) { ... } }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://ryanfait.com/sticky-footer/">
+        
+          http://ryanfait.com/sticky-footer/
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_mixins.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-fullscreen-bg">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-fullscreen-bg">fullscreen-bg</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+<pre class="item__code"><code class="language-scss">@mixin fullscreen-bg() { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Fullscreen Background for &lt; IE8</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <p>None.</p>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { @include fullscreen-bg() { ... } }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://css-tricks.com/perfect-full-page-background-image/">
+        
+          http://css-tricks.com/perfect-full-page-background-image/
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_mixins.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-opacity">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-opacity">opacity</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin opacity($opacity) { ... }</code></pre>
+
+
+
+  
+  
+  
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$opacity</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { @include opacity(4) { ... } }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_mixins.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-inline-block">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-inline-block">inline-block</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin inline-block($alignment: baseline) { ... }</code></pre>
+
+
+
+  
+  
+  
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$alignment</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            <code>baseline</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { @include inline-block() { ... } }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://bit.ly/thoughtbot-bourbon-inline-block">
+        
+          http://bit.ly/thoughtbot-bourbon-inline-block
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_mixins.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-image-2x">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-image-2x">image-2x</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin image-2x($image, $width, $height) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Retina Displays</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$image</code></th>
+          <td data-label="desc"><p>image url</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$width</code></th>
+          <td data-label="desc"><p>image width</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$height</code></th>
+          <td data-label="desc"><p>image height</p></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { @include image-2x(&#39;img/logo.png&#39;, 200px, 300px) { ... } }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_mixins.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="mixin-rgba-bg">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-rgba-bg">rgba-bg</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@mixin rgba-bg($color, $percent) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>RGBA Fallback</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$color</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$percent</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { @include rgba-bg(#f37,.9) { ... } }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_mixins.scss</code></p>
+
+
+
+
+            </section>
+
+          
+        </section>
+
+      
+
+    
+
+      
+      
+
+      
+      
+        <section class="main__section">
+          <h1 class="main__heading" id="function">Functions</h1>
+
+          
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-em">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-em">em</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function em($target, $context: $base-font-size) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>px to em conversion</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$target</code></th>
+          <td data-label="desc"><p>size to convert</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$context</code></th>
+          <td data-label="desc"><p>context conversion is based on</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$base-font-size</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: em(30); }</code></pre>
+  
+
+
+  
+
+  
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#variable-base-font-size"><code>base-font-size</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://www.pjmccormick.com/sweet-sass-function-convert-px-em">
+        
+          http://www.pjmccormick.com/sweet-sass-function-convert-px-em
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-rem">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-rem">rem</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function rem($target, $context: $base-font-size) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>px to rem</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$target</code></th>
+          <td data-label="desc"><p>size to convert</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$context</code></th>
+          <td data-label="desc"><p>context conversion is based on</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$base-font-size</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: rem(30); }</code></pre>
+  
+
+
+  
+
+  
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#variable-base-font-size"><code>base-font-size</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://www.pjmccormick.com/sweet-sass-function-convert-px-em">
+        
+          http://www.pjmccormick.com/sweet-sass-function-convert-px-em
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-px">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-px">px</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function px($target, $context: $base-font-size) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>em to px conversion</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$target</code></th>
+          <td data-label="desc"><p>size to convert</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$context</code></th>
+          <td data-label="desc"><p>context conversion is based on</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$base-font-size</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: px(30); }</code></pre>
+  
+
+
+  
+
+  
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    <li><a href="#variable-base-font-size"><code>base-font-size</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://www.pjmccormick.com/sweet-sass-function-convert-px-em">
+        
+          http://www.pjmccormick.com/sweet-sass-function-convert-px-em
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-aspect-ratio">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-aspect-ratio">aspect-ratio</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function aspect-ratio($ratio-numerator, $ratio-denominator) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Aspect Ratio</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$ratio-numerator</code></th>
+          <td data-label="desc"><p>ratio numerator</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$ratio-denominator</code></th>
+          <td data-label="desc"><p>ratio denominator</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: aspect-ratio(16,9); } // @returns 56.25%</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-aspect-ratio-fixed">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-aspect-ratio-fixed">aspect-ratio-fixed</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function aspect-ratio-fixed($w, $h) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Aspect Ratio<br>Based on Fixed Image Dimensions</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$w</code></th>
+          <td data-label="desc"><p>image width</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$h</code></th>
+          <td data-label="desc"><p>image height</p></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding: 0 0 aspect-ratio-fixed(1080, 720); } // @returns 66.666666666667%</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-context-calc">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-context-calc">context-calc</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function context-calc($target, $context) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Context Calculator</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$target</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$context</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: context-calc(30,15); }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+
+            
+            
+            
+            <section class="main__item  item" id="function-strip-unit">
+              <h2 class="item__heading">
+  
+
+  <a class="item__name" href="#function-strip-unit">strip-unit</a>
+
+  
+
+  
+
+  
+</h2>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+<pre class="item__code"><code class="language-scss">@function strip-unit($num) { ... }</code></pre>
+
+
+
+  
+  
+  
+  <h3 class="item__sub-heading">Description</h3>
+  
+  <div class="item__description"><p>Strip Unit Values</p></div>
+
+
+  <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$num</code></th>
+          <td data-label="desc">&mdash;<span class="visually-hidden"> none</span></td>
+          <td data-label="type">
+          
+            String
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+  <h3 class="item__sub-heading">Returns</h3>
+  <p class="sassdoc__item-description">
+  
+    Number
+  
+  </p>
+
+
+  
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+    <pre class="item__example"><code class="language-scss">.foobar { padding-bottom: strip-unit(30px); }</code></pre>
+  
+
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  	
+
+  
+  <h3 class="item__sub-heading">Links</h3>
+
+  <ul class="list-unstyled">
+  
+    <li>
+      <a href="http://hugogiraudel.com/2013/08/12/sass-functions">
+        
+          http://hugogiraudel.com/2013/08/12/sass-functions
+        
+      </a>
+    </li>
+  
+  </ul>
+
+
+  
+
+  
+  <h3 class="item__sub-heading">Found at</h3>
+
+  <p><code>scss/utilities/_functions.scss</code></p>
+
+
+
+
+            </section>
+
+          
+        </section>
+
+      
+
+    
+
+  
+
+
+    </article>
+
+  </div>
+
+  
+  
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      
+        <div class="footer__project-info  project-info">
+          <!-- Name and URL -->
+          
+            <a class="project-info__name" href="https://github.com/minamarkham/sassy-starter/">Sassy Starter</a>
+          
+
+          <!-- Version -->
+          <span class="project-info__version"> - v0.1.0</span>
+
+          <!-- License -->
+          
+          <span class="project-info__license">, under
+            
+              
+                <a href="http://opensource.org/licenses/MIT">MIT</a>
+              
+            
+            </span>
+          
+        </div>
+      
+
+      
+        <span class="footer__watermark">Built with <a href="https://github.com/SassDoc/sassdoc">SassDoc</a>.</span>
+      
+    </div>
+  </footer>
+
+
+
+  
+  <script src="assets/js/prism.min.js"></script>
+
+</body>
+</html>
