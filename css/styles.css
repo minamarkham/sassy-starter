@@ -18,6 +18,12 @@ h1 {
 		letter-spacing: -0.03125em;
 		color: #699;
 }
+.f5 {
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: .03125em;
+color: #808c99;	
+}
 
 b {
 		font-weight: 700;
