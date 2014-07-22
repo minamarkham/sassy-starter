@@ -1,3 +1,3 @@
-Sassy starter - HTML / SCSS (SMACSS)
-=====================
+# Sassy Starter
+
 GitHub page
