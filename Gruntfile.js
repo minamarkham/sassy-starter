@@ -33,7 +33,8 @@ module.exports = function(grunt) {
     sass: {                                       // Task
       dev: {                                      // Target
         options: {                                // Target options
-          style: 'expanded'
+          style: 'expanded',
+          require: 'susy'
         },
         files: {                                  // Dictionary of files
           'css/styles.css': 'scss/styles.scss',   // 'destination': 'source'
@@ -43,7 +44,8 @@ module.exports = function(grunt) {
       },
       prod: {                                     // Target
         options: {                                // Target options
-          style: 'compressed'
+          style: 'compressed',
+          require : 'susy'
         },
         files: {                                  // Dictionary of files
           'css/styles.css': 'scss/styles.scss',   // 'destination': 'source'
@@ -103,6 +105,13 @@ module.exports = function(grunt) {
             spawn: false,
         }
       },
+      html: {
+        files: ['**/*.html'],
+        tasks: ['sass:dev'],
+        options: {
+            spawn: false,
+        }
+      },
       docs: {
         files: ['scss/**/*.scss'],
         tasks: ['sassdoc'],
@@ -112,6 +121,23 @@ module.exports = function(grunt) {
       }
 
     },
+
+
+    // Browser Sync
+    browserSync: {
+              dev: {
+                  bsFiles: {
+                      src : ['css/*.css', 'js/**/*.js', '*.html']
+                  },
+                  options: {
+                      watchTask: true,
+
+                      server: {
+                          baseDir: './'
+                      }
+                  }
+              }
+          },
 
     // configure image optimization --> grunt imagemin
     imagemin: {
@@ -126,6 +152,7 @@ module.exports = function(grunt) {
     }
   });
 
+
   // DEPENDENT PLUGINS =========================/
 
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -134,10 +161,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
-
+  grunt.loadNpmTasks('grunt-browser-sync');
   // TASKS =====================================/
 
-  grunt.registerTask( 'default', [ 'watch'] ); // default 'grunt'
+  grunt.registerTask( 'default', ['browserSync', 'watch'] ); // default 'grunt'
   grunt.registerTask( 'build', [ 'imagemin','sass:prod' ] ); // optimize images, compress css
 
 };

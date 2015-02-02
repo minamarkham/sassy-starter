@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.5",
+    "grunt-browser-sync": "^1.9.1",
     "grunt-contrib-concat": "~0.4.0",
     "grunt-contrib-imagemin": "~0.7.0",
     "grunt-contrib-sass": "^0.7.3",
