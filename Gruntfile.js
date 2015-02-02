@@ -130,11 +130,13 @@ module.exports = function(grunt) {
                       src : ['css/*.css', 'js/**/*.js', '*.html']
                   },
                   options: {
-                      watchTask: true,
-
                       server: {
                           baseDir: './'
-                      }
+                      },
+                      // proxy: "local.dev", // enable if needed.
+                      watchTask: true,
+                      notify : false,
+                      scrollProportionally: true
                   }
               }
           },
