@@ -93,7 +93,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['js/**/*.js'],
-        tasks: ['concat', 'uglify'],
+        tasks: ['concat', 'uglify', 'svgmin' , 'svgstore'],
         options: {
             spawn: false,
         },
@@ -151,7 +151,36 @@ module.exports = function(grunt) {
             dest: 'img/build/'
         }]
       }
-    }
+    },
+
+    svgmin: {
+      dist: {
+          files: [{
+              expand: true,
+              cwd: 'img/svgs',
+              src: ['*.svg'],
+              dest: 'img/svgs/source'
+          }]
+      }
+  },
+
+
+    svgstore: {
+      options: {
+        prefix : 'icon-', // This will prefix each ID
+        // cleanup: ['fill'],
+        // svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
+        //   viewBox : '0 0 100 100',
+        //   xmlns: 'http://www.w3.org/2000/svg'
+        // }
+      },
+      default: {
+        files: {
+          'img/svg/defs.svg': ['img/svgs/source/*.svg'],
+        },
+      },
+  },
+
   });
 
 
@@ -164,10 +193,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-svgstore');
   // TASKS =====================================/
 
   grunt.registerTask( 'default', ['browserSync', 'watch'] ); // default 'grunt'
-  grunt.registerTask( 'build', [ 'imagemin','sass:prod' ] ); // optimize images, compress css
+  grunt.registerTask( 'build', [ 'imagemin','sass:prod', 'svgmin', 'svgstore'] ); // optimize images, compress css
 
 };
 
