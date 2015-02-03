@@ -49,18 +49,31 @@
  * .foobar { @include mq(20em) { ... } }
  */
 
-@mixin mq($breakpoint, $query: 'min-width', $type: 'screen') { // breakpoint can be a variable
-  // if media queries are not supported
-  @if $fix-mqs {
-    @if $fix-mqs >= $breakpoint { // ...and if the fixed breakpoint is greater than query...
-      @content; // ...output the content the user gave us.
+// @mixin mq($breakpoint, $query: 'min-width', $type: 'screen') { // breakpoint can be a variable
+//   // if media queries are not supported
+//   @if $fix-mqs {
+//     @if $fix-mqs >= $breakpoint { // ...and if the fixed breakpoint is greater than query...
+//       @content; // ...output the content the user gave us.
+//     }
+//   }
+//   // Otherwise, output it using a regular media query
+//   @else {
+//     @media #{$type} and (#{$query}: #{$breakpoint}) { @content; }
+//   }
+//  }
+
+
+@mixin breakpoint($name) {
+      @if map-has-key($breakpoints, $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
     }
   }
-  // Otherwise, output it using a regular media query
   @else {
-    @media #{$type} and (#{$query}: #{$breakpoint}) { @content; }
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
   }
- }
+}
+
 
 /**
  * IE Specific Styles

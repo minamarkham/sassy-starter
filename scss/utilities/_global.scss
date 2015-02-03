@@ -174,12 +174,24 @@ $font-weight-bold             : 900;
 // You'll need to define your own breakpoints to suit your design
 // ============
 
-$mobile-small                 : 240;
-$mobile-large                 : 320;
-$tablet-small                 : 480;
-$tablet-large                 : 768;
-$screen-small                 : 1024;
-$screen-large                 : 1280;
+// $mobile-small                 : 240;
+// $mobile-large                 : 320;
+// $tablet-small                 : 480;
+// $tablet-large                 : 768;
+// $screen-small                 : 1024;
+// $screen-large                 : 1280;
+
+
+$breakpoints: (
+  'tiny':   ( max-width:  47.938em ),
+  'small':  ( min-width:  48.000em ),
+  'medium': ( min-width:  62.000em ),
+  'large':  ( min-width:  75.000em ),
+  'custom': ( min-height:  40em )
+);
+
+
+
 
 /**
  * Define z-indexes for various elements
