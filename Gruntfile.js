@@ -93,7 +93,7 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['js/**/*.js'],
-        tasks: ['concat', 'uglify', 'svgmin' , 'svgstore'],
+        tasks: ['concat', 'uglify'],
         options: {
             spawn: false,
         },
