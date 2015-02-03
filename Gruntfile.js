@@ -146,8 +146,8 @@ module.exports = function(grunt) {
         }
       },
       imgUri: {
-        files: ['img/build/*.png', 'img/build/*.gif'],
-        tasks: ['datauri'],
+        files: ['img/*.png', 'img/*.gif', 'img/svgs/*.svg'],
+        tasks: ['imagebuild'],
         options: {
             spawn: false,
         }
@@ -307,6 +307,7 @@ module.exports = function(grunt) {
   grunt.registerTask( 'default', ['browserSync', 'watch','imagemin', 'svgstore', 'datauri'] ); // default 'grunt'
   grunt.registerTask( 'build', [ 'imagemin','sass:prod', 'svgmin', 'svgstore', 'datauri'] ); // optimize images, compress css
   grunt.registerTask( 'perf', ['pagespeed', 'parker'] );
+  grunt.registerTask ( 'imagebuild', ['imagemin', 'svgstore', 'datauri'] );
 
 };
 
