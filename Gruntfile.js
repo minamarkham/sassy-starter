@@ -22,6 +22,8 @@
 
 */
 
+'use strict';
+
 module.exports = function(grunt) {
 
   // CONFIG ===================================/
@@ -38,8 +40,8 @@ module.exports = function(grunt) {
         },
         files: {                                  // Dictionary of files
           'css/styles.css': 'scss/styles.scss',   // 'destination': 'source'
-          'css/ie.css': 'scss/ie.scss',
-          'css/themes/*.css':'scss/themes/*.scss'
+          // 'css/ie.css': 'scss/ie.scss',
+          // 'css/themes/*.css':'scss/themes/*.scss'
         }
       },
       prod: {                                     // Target
@@ -49,8 +51,8 @@ module.exports = function(grunt) {
         },
         files: {                                  // Dictionary of files
           'css/styles.css': 'scss/styles.scss',   // 'destination': 'source'
-          'css/ie.css': 'scss/ie.scss',
-          'css/themes/*.css':'scss/themes/*.scss'
+          // 'css/ie.css': 'scss/ie.scss',
+          // 'css/themes/*.css':'scss/themes/*.scss'
         }
       }
     },
@@ -89,11 +91,41 @@ module.exports = function(grunt) {
       }
     },
 
+    //jshint javascript hint
+    //
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc'
+      },
+      all: [
+        'Gruntfile.js',
+        'js/global.js'
+      ]
+    },
+
+
+    datauri: {
+        default: {
+            options: {
+                classPrefix: 'data-icon-'
+            },
+            src: [
+                "img/*.png",
+                "img/*.gif",
+            ],
+            dest: [
+                "scss/utilities/lib/_base64placeholder.scss"
+            ]
+        }
+    },
+
+
+
     // configure file watching --> grunt watch
     watch: {
       scripts: {
         files: ['js/**/*.js'],
-        tasks: ['concat', 'uglify'],
+        tasks: ['jshint', 'concat', 'uglify'],
         options: {
             spawn: false,
         },
@@ -102,12 +134,20 @@ module.exports = function(grunt) {
         files: ['scss/**/*.scss'],
         tasks: ['sass:dev'],
         options: {
+            livereload: true,
             spawn: false,
         }
       },
       html: {
         files: ['**/*.html'],
         tasks: ['sass:dev'],
+        options: {
+            spawn: false,
+        }
+      },
+      imgUri: {
+        files: ['img/build/*.png', 'img/build/*.gif'],
+        tasks: ['datauri'],
         options: {
             spawn: false,
         }
@@ -148,7 +188,7 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'img/',
             src: ['**/*.{png,jpg,gif}'],
-            dest: 'img/build/'
+            dest: 'img/build'
         }]
       }
     },
@@ -159,7 +199,7 @@ module.exports = function(grunt) {
               expand: true,
               cwd: 'img/svgs',
               src: ['*.svg'],
-              dest: 'img/svgs/source'
+              dest: 'img/build/svgmin'
           }]
       }
   },
@@ -176,12 +216,67 @@ module.exports = function(grunt) {
       },
       default: {
         files: {
-          'img/svg/defs.svg': ['img/svgs/source/*.svg'],
+          'img/build/svgmin/defs.svg': ['img/build/svgmin/*.svg'],
         },
       },
   },
 
-  });
+
+  // // perf
+  //  devperf: {
+  //   options: {
+  //     urls: [
+  //       'http://www.telegrafi.com',
+  //     ],
+  //     numberOfRuns: 5,
+  //     timeout: 120,
+  //     openResults: true,
+  //     resultsFolder: './devperf'
+  //   }
+  // },
+
+  pagespeed: {
+  options: {
+    nokey: true,
+    url: 'http://localhost'
+  },
+  desktop: {
+    options: {
+      url: 'http://localhost',
+      locale: 'en_GB',
+      strategy: 'desktop',
+      threshold: 80
+    }
+  },
+  mobile: {
+    options: {
+      url: 'http://localhost',
+      locale: 'en_GB',
+      strategy: 'mobile',
+      threshold: 80
+    }
+  },
+},
+
+  parker: {
+    options: {
+      // metrics: [
+      //   "TotalRules",
+      //   "TotalSelectors",
+      //   "TotalIdentifiers",
+      //   "TotalDeclarations"
+      // ],
+      // file: "report.md",
+      // colophon: true,
+      // usePackage: true
+    },
+    src: [
+      'css/*.css'
+    ]
+  }
+
+
+});
 
 
   // DEPENDENT PLUGINS =========================/
@@ -195,10 +290,23 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-svgstore');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-datauri');
+
+
+
+
+  // perf
+  // grunt.loadNpmTasks('grunt-devperf');
+  grunt.loadNpmTasks('grunt-pagespeed');
+  grunt.loadNpmTasks('grunt-phantomas');
+  grunt.loadNpmTasks('grunt-parker');
+
   // TASKS =====================================/
 
-  grunt.registerTask( 'default', ['browserSync', 'watch'] ); // default 'grunt'
-  grunt.registerTask( 'build', [ 'imagemin','sass:prod', 'svgmin', 'svgstore'] ); // optimize images, compress css
+  grunt.registerTask( 'default', ['browserSync', 'watch','imagemin', 'svgstore', 'datauri'] ); // default 'grunt'
+  grunt.registerTask( 'build', [ 'imagemin','sass:prod', 'svgmin', 'svgstore', 'datauri'] ); // optimize images, compress css
+  grunt.registerTask( 'perf', ['pagespeed', 'parker'] );
 
 };
 

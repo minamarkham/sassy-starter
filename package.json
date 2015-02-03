@@ -1,5 +1,5 @@
 {
-  "name": "sassy-starter",
+  "name": "RR Starter",
   "title": "Sassy Starter",
   "description": "A starter toolkit based on Scalable and Modular Architecture for CSS (SMACSS) for Sass (SCSS) projects",
   "author": {
@@ -37,9 +37,15 @@
     "grunt-browser-sync": "^1.9.1",
     "grunt-contrib-concat": "~0.4.0",
     "grunt-contrib-imagemin": "~0.7.0",
+    "grunt-contrib-jshint": "^0.11.0",
     "grunt-contrib-sass": "^0.7.3",
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-datauri": "^0.4.0",
+    "grunt-devperf": "^0.2.12",
+    "grunt-pagespeed": "^0.4.1",
+    "grunt-parker": "^0.1.3",
+    "grunt-phantomas": "^0.11.0",
     "grunt-sassdoc": "^0.4.0",
     "grunt-svgmin": "^2.0.0",
     "grunt-svgstore": "^0.5.0"
