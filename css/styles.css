@@ -206,6 +206,18 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "source-sans-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
 @media print {
   * {
     background: transparent !important;

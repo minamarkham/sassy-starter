@@ -2,7 +2,7 @@ $susy: (
   flow: ltr,
   math: fluid,
   output: float,
-  gutter-position: after,
+  gutter-position: inside,
   container: auto,
   container-position: center,
   columns: 12,
@@ -11,7 +11,7 @@ $susy: (
   global-box-sizing: border-box,
   last-flow: to,
   debug: (
-    image: show,
+    image: hide,
     color: rgba(#66f, .25),
     output: background,
     toggle: top right,

@@ -97,8 +97,8 @@ module.exports = function(grunt) {
       }
     },
 
-    //jshint javascript hint
-    //
+    // jshint javascript hint
+
     jshint: {
       options: {
         jshintrc: '.jshintrc'
@@ -116,11 +116,11 @@ module.exports = function(grunt) {
                 classPrefix: 'data-icon-'
             },
             src: [
-                "img/*.png",
-                "img/*.gif",
+                'img/*.png',
+                'img/*.gif',
             ],
             dest: [
-                "scss/utilities/lib/_base64placeholder.scss"
+                'scss/utilities/lib/_base64placeholder.scss'
             ]
         }
     },
@@ -158,13 +158,13 @@ module.exports = function(grunt) {
             spawn: true,
         }
       },
-      docs: {
-        files: ['scss/**/*.scss'],
-        tasks: ['sassdoc'],
-        options: {
-            spawn: false,
-        }
-      }
+      // docs: {
+      //   files: ['scss/**/*.scss'],
+      //   tasks: ['sassdoc'],
+      //   options: {
+      //       spawn: false,
+      //   }
+      // }
 
     },
 

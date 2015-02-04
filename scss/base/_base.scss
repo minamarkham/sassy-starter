@@ -1,4 +1,10 @@
 @include border-box-sizing;
 
 
+body {
+  @include container;
+  font-family: $font-family-default;
+}
+
+
 
