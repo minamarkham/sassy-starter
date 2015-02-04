@@ -71,7 +71,8 @@ module.exports = function(grunt) {
     // clean
 
     clean: {
-        src: ['!img/*.png', '!img/*.gif' , '!img/svgs/*.svg', 'img/build']
+        src: ['!img/*.png', '!img/*.gif' , '!img/svgs/*.svg', 'img/build'],
+        js: ['js/build']
      },
 
     // configure concatenation --> grunt concat
@@ -97,7 +98,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // jshint javascript hint
 
     jshint: {
       options: {
@@ -131,9 +131,9 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['js/**/*.js'],
-        tasks: ['jshint', 'concat', 'uglify'],
+        tasks: ['jshint'],
         options: {
-            spawn: false,
+            spawn: true,
         },
       },
       css: {
@@ -312,7 +312,7 @@ module.exports = function(grunt) {
   // TASKS =====================================/
 
   grunt.registerTask( 'default', ['browserSync', 'watch','imagemin', 'svgstore', 'datauri'] ); // default 'grunt'
-  grunt.registerTask( 'build', [ 'clean', 'imagemin','sass:prod', 'svgmin', 'svgstore', 'datauri'] ); // optimize images, compress css
+  grunt.registerTask( 'prod', [ 'clean', 'concat', 'uglify', 'imagemin','sass:prod', 'svgmin', 'svgstore', 'datauri'] ); // optimize images, compress css
   grunt.registerTask( 'perf', ['pagespeed', 'parker'] );
   grunt.registerTask ( 'imagebuild', ['imagemin', 'svgmin', 'svgstore', 'datauri'] );
 
