@@ -205,26 +205,42 @@ module.exports = function(grunt) {
               expand: true,
               cwd: 'img/svgs',
               src: ['*.svg'],
-              dest: 'img/build/svgmin'
+              dest: 'img/build/min'
           }]
       }
   },
 
 
-    svgstore: {
-      options: {
-        prefix : 'icon-', // This will prefix each ID
-        // cleanup: ['fill'],
-        // svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
-        //   viewBox : '0 0 100 100',
-        //   xmlns: 'http://www.w3.org/2000/svg'
-        // }
-      },
-      default: {
-        files: {
-          'img/build/svgmin/defs.svg': ['img/build/svgmin/*.svg'],
-        },
-      },
+  //   svgstore: {
+  //     options: {
+  //       prefix : 'icon-', // This will prefix each ID
+  //       // cleanup: ['fill'],
+  //       // svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
+  //       //   viewBox : '0 0 100 100',
+  //       //   xmlns: 'http://www.w3.org/2000/svg'
+  //       // }
+  //     },
+  //     default: {
+  //       files: {
+  //         'img/build/svgmin/defs.svg': ['img/build/svgmin/*.svg'],
+  //       },
+  //     },
+  // },
+  //
+
+
+  grunticon: {
+    myIcons: {
+        files: [{
+            expand: true,
+            cwd: 'img/build/min',
+            src: ['*.svg', '*.png'],
+            dest: "img/build/min"
+        }],
+        options: {
+          enhanceSVG: true
+        }
+    }
   },
 
 
@@ -295,10 +311,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-svgmin');
-  grunt.loadNpmTasks('grunt-svgstore');
+  // grunt.loadNpmTasks('grunt-svgstore');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-datauri');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-grunticon');
 
 
 
@@ -311,10 +328,10 @@ module.exports = function(grunt) {
 
   // TASKS =====================================/
 
-  grunt.registerTask( 'default', ['browserSync', 'watch','imagemin', 'svgstore', 'datauri'] ); // default 'grunt'
-  grunt.registerTask( 'prod', [ 'clean', 'concat', 'uglify', 'imagemin','sass:prod', 'svgmin', 'svgstore', 'datauri'] ); // optimize images, compress css
+  grunt.registerTask( 'default', ['browserSync', 'watch','imagemin', 'grunticon', 'datauri'] ); // default 'grunt'
+  grunt.registerTask( 'prod', [ 'clean', 'concat', 'uglify', 'imagemin','sass:prod', 'svgmin', 'grunticon', 'datauri'] ); // optimize images, compress css
   grunt.registerTask( 'perf', ['pagespeed', 'parker'] );
-  grunt.registerTask ( 'imagebuild', ['imagemin', 'svgmin', 'svgstore', 'datauri'] );
+  grunt.registerTask ( 'imagebuild', ['imagemin', 'svgmin', 'grunticon', 'datauri'] );
 
 };
 
