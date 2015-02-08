@@ -53,11 +53,11 @@ $color-shadow                 : rgba($black, .125);
 $color-note                   : #666;
 
 // Common colors
-$color-background             : $white;
+$color-background             : $black;
 $color-background-shade       : $iron;
 $color-background-invert      : $hopbush;
 $color-border                 : $iron;
-$color-text                   : darken($pale-sky, 15);
+$color-text                   : $white;
 $color-text-weak              : $regent-grey;
 $color-text-strong            : $midnight-blue;
 $color-text-heading           : $regent-grey;
@@ -118,30 +118,27 @@ $base-line-height             : 24;
  * (optional) names of webfonts imports
  * @type array
  */
-
-// $fonts                     : 'FONTNAME', 'FONTNAME', 'FONTNAME', 'FONTNAME';
+$fonts                     : 'Campton-ExtraLight', 'Campton-Light';
 
 /**
  * define font stack used for sans-serifs
  * @type string
  */
 
-$font-family-sans             : 'source-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-primary             : 'Campton-ExtraLight', 'source-sans-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 /**
  * define font stack used for serifs
  * @type string
  */
 
-$font-family-serif            : 'source-serif-pro', Georgia, 'Times New Roman', Times, serif;
+$font-family-serif            : 'Campton-Light', 'source-serif-pro', Georgia, 'Times New Roman', Times, serif;
 
 /**
  * define font stack used for monospaced copy
  * @type string
  */
-
-$font-family-monospace        : 'source-code-pro','Inconsolata', "Menlo", Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
-                                'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
+$font-family-monospace        : 'Campton-Light', 'source-code-pro','Inconsolata', "Menlo", Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
                                 Monaco, 'Courier New', Courier, monospace;
 
 /**
@@ -150,7 +147,7 @@ $font-family-monospace        : 'source-code-pro','Inconsolata', "Menlo", Consol
  * @type string
  */
 
-$font-family-display          : $font-family-serif;
+$font-family-heading          : $font-family-primary;
 
 /**
  * define font stack used for paragraphs
@@ -158,7 +155,7 @@ $font-family-display          : $font-family-serif;
  * @type string
  */
 
-$font-family-default          : $font-family-sans;
+$font-family-default          : $font-family-primary;
 
 // Font Weights
 // ============
