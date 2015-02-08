@@ -22,6 +22,8 @@
 
 */
 
+'use strict';
+
 module.exports = function(grunt) {
 
   // CONFIG ===================================/
@@ -33,22 +35,24 @@ module.exports = function(grunt) {
     sass: {                                       // Task
       dev: {                                      // Target
         options: {                                // Target options
-          style: 'expanded'
+          style: 'expanded',
+          require: 'susy'
         },
         files: {                                  // Dictionary of files
           'css/styles.css': 'scss/styles.scss',   // 'destination': 'source'
-          'css/ie.css': 'scss/ie.scss',
-          'css/themes/*.css':'scss/themes/*.scss'
+          // 'css/ie.css': 'scss/ie.scss',
+          // 'css/themes/*.css':'scss/themes/*.scss'
         }
       },
       prod: {                                     // Target
         options: {                                // Target options
-          style: 'compressed'
+          style: 'compressed',
+          require : 'susy'
         },
         files: {                                  // Dictionary of files
           'css/styles.css': 'scss/styles.scss',   // 'destination': 'source'
-          'css/ie.css': 'scss/ie.scss',
-          'css/themes/*.css':'scss/themes/*.scss'
+          // 'css/ie.css': 'scss/ie.scss',
+          // 'css/themes/*.css':'scss/themes/*.scss'
         }
       }
     },
@@ -63,6 +67,13 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    // clean
+
+    clean: {
+        src: ['!img/*.png', '!img/*.gif' , '!img/svgs/*.svg', 'img/build'],
+        js: ['js/build']
+     },
 
     // configure concatenation --> grunt concat
     concat: {
@@ -87,31 +98,94 @@ module.exports = function(grunt) {
       }
     },
 
+
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc'
+      },
+      all: [
+        'Gruntfile.js',
+        'js/global.js'
+      ]
+    },
+
+
+    datauri: {
+        default: {
+            options: {
+                classPrefix: 'data-icon-'
+            },
+            src: [
+                'img/*.png',
+                'img/*.gif',
+            ],
+            dest: [
+                'scss/utilities/lib/_base64placeholder.scss'
+            ]
+        }
+    },
+
+
+
     // configure file watching --> grunt watch
     watch: {
       scripts: {
         files: ['js/**/*.js'],
-        tasks: ['concat', 'uglify'],
+        tasks: ['jshint'],
         options: {
-            spawn: false,
+            spawn: true,
         },
       },
       css: {
         files: ['scss/**/*.scss'],
         tasks: ['sass:dev'],
         options: {
+            livereload: true,
             spawn: false,
         }
       },
-      docs: {
-        files: ['scss/**/*.scss'],
-        tasks: ['sassdoc'],
+      html: {
+        files: ['**/*.html'],
+        tasks: ['sass:dev'],
         options: {
             spawn: false,
         }
-      }
+      },
+      imgUri: {
+        files: ['img/*.png', 'img/*.gif', 'img/svgs/*.svg'],
+        tasks: [ 'clean', 'imagebuild'],
+        options: {
+            spawn: true,
+        }
+      },
+      // docs: {
+      //   files: ['scss/**/*.scss'],
+      //   tasks: ['sassdoc'],
+      //   options: {
+      //       spawn: false,
+      //   }
+      // }
 
     },
+
+
+    // Browser Sync
+    browserSync: {
+              dev: {
+                  bsFiles: {
+                      src : ['css/*.css', 'js/**/*.js', '*.html']
+                  },
+                  options: {
+                      server: {
+                          baseDir: './'
+                      },
+                      // proxy: "local.dev", // enable if needed.
+                      watchTask: true,
+                      notify : false,
+                      scrollProportionally: true
+                  }
+              }
+          },
 
     // configure image optimization --> grunt imagemin
     imagemin: {
@@ -120,11 +194,112 @@ module.exports = function(grunt) {
             expand: true,
             cwd: 'img/',
             src: ['**/*.{png,jpg,gif}'],
-            dest: 'img/build/'
+            dest: 'img/build'
         }]
       }
+    },
+
+    svgmin: {
+      dist: {
+          files: [{
+              expand: true,
+              cwd: 'img/svgs',
+              src: ['*.svg'],
+              dest: 'img/build/min'
+          }]
+      }
+  },
+
+
+  //   svgstore: {
+  //     options: {
+  //       prefix : 'icon-', // This will prefix each ID
+  //       // cleanup: ['fill'],
+  //       // svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
+  //       //   viewBox : '0 0 100 100',
+  //       //   xmlns: 'http://www.w3.org/2000/svg'
+  //       // }
+  //     },
+  //     default: {
+  //       files: {
+  //         'img/build/svgmin/defs.svg': ['img/build/svgmin/*.svg'],
+  //       },
+  //     },
+  // },
+  //
+
+
+  grunticon: {
+    myIcons: {
+        files: [{
+            expand: true,
+            cwd: 'img/build/min',
+            src: ['*.svg', '*.png'],
+            dest: "img/build/min"
+        }],
+        options: {
+          enhanceSVG: true
+        }
     }
-  });
+  },
+
+
+  // // perf
+  //  devperf: {
+  //   options: {
+  //     urls: [
+  //       'http://www.telegrafi.com',
+  //     ],
+  //     numberOfRuns: 5,
+  //     timeout: 120,
+  //     openResults: true,
+  //     resultsFolder: './devperf'
+  //   }
+  // },
+
+  pagespeed: {
+  options: {
+    nokey: true,
+    url: 'http://localhost'
+  },
+  desktop: {
+    options: {
+      url: 'http://localhost',
+      locale: 'en_GB',
+      strategy: 'desktop',
+      threshold: 80
+    }
+  },
+  mobile: {
+    options: {
+      url: 'http://localhost',
+      locale: 'en_GB',
+      strategy: 'mobile',
+      threshold: 80
+    }
+  },
+},
+
+  parker: {
+    options: {
+      // metrics: [
+      //   "TotalRules",
+      //   "TotalSelectors",
+      //   "TotalIdentifiers",
+      //   "TotalDeclarations"
+      // ],
+      // file: "report.md",
+      // colophon: true,
+      // usePackage: true
+    },
+    src: [
+      'css/*.css'
+    ]
+  }
+
+
+});
+
 
   // DEPENDENT PLUGINS =========================/
 
@@ -134,11 +309,29 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-svgmin');
+  // grunt.loadNpmTasks('grunt-svgstore');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-datauri');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-grunticon');
+
+
+
+
+  // perf
+  // grunt.loadNpmTasks('grunt-devperf');
+  grunt.loadNpmTasks('grunt-pagespeed');
+  grunt.loadNpmTasks('grunt-phantomas');
+  grunt.loadNpmTasks('grunt-parker');
 
   // TASKS =====================================/
 
-  grunt.registerTask( 'default', [ 'watch'] ); // default 'grunt'
-  grunt.registerTask( 'build', [ 'imagemin','sass:prod' ] ); // optimize images, compress css
+  grunt.registerTask( 'default', ['browserSync', 'watch','imagemin', 'grunticon', 'datauri'] ); // default 'grunt'
+  grunt.registerTask( 'prod', [ 'clean', 'concat', 'uglify', 'imagemin','sass:prod', 'svgmin', 'grunticon', 'datauri'] ); // optimize images, compress css
+  grunt.registerTask( 'perf', ['pagespeed', 'parker'] );
+  grunt.registerTask ( 'imagebuild', ['imagemin', 'svgmin', 'grunticon', 'datauri'] );
 
 };
 

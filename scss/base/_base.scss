@@ -1,0 +1,103 @@
+@include border-box-sizing;
+
+// TypeBase
+
+$baseFontSize: $base-font-size;
+$baseLineHeight: 1.5;
+$leading: $baseLineHeight * 1rem;
+// Rate of growth for headings
+$scale: 1.414;
+
+
+html {
+    font-family: $font-family-default;
+    font-size: $baseFontSize / 16 * 100%;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+p {
+    line-height: $leading;
+    margin-top: $leading;
+    margin-bottom: 0;
+}
+ul,
+ol {
+    margin-top: $leading;
+    margin-bottom: $leading;
+    li {
+        line-height: $leading;
+    }
+    ul,
+    ol {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+blockquote {
+    line-height: $leading;
+    margin-top: $leading;
+    margin-bottom: $leading;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family-heading;
+    margin-top: $leading;
+    margin-bottom: 0;
+    line-height: $leading;
+}
+h1 {
+    font-size: 3 * $scale * 1rem;
+    line-height: 3 * $leading;
+    margin-top: 2 * $leading;
+}
+h2 {
+    font-size: 2 * $scale * 1rem;
+    line-height: 2 * $leading;
+    margin-top: 2 * $leading;
+}
+h3 {
+    font-size: 1 * $scale * 1rem;
+}
+h4 {
+    font-size: $scale / 2 * 1rem;
+}
+h5 {
+    font-size: $scale / 3 * 1rem;
+}
+h6 {
+    font-size: $scale / 4 * 1rem;
+}
+
+table {
+    margin-top: $leading;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+td,
+th {
+    padding: 0;
+    line-height: $baseLineHeight * $baseFontSize - 0px;
+}
+
+code {
+    vertical-align: bottom;
+}
+
+.lead {
+    font-size: $scale * 1rem;
+}
+
+.hug {
+    margin-top: 0;
+}
+
+
+body {
+  @include container;
+}

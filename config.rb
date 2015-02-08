@@ -9,6 +9,7 @@
 # URL:      http://example.com/
 # Github:   https://github.com/example
 # require 'example'
+# require 'susy'
 
 # Config
 # ======

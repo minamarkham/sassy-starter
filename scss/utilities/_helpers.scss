@@ -88,3 +88,48 @@
 %invisible {
   visibility: hidden;
 }
+
+
+// hocus default link state
+
+@mixin hocus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+// a {
+//   color: blue;
+
+//   @include hocus {
+//     color: red;
+//   }
+// }
+
+
+// retina background
+
+@mixin retina-background($filename) {
+  $filebase: str-slice($filename, 1, -5);
+  $ext: str-slice($filename, -4);
+
+  // Alternatively:
+  // $period-index: str-index($filename, '.');
+  // $filebase: str-slice($filename, 1, $period-index - 1);
+  // $ext: str-slice($filename, $period-index);
+
+  $filename-normal: "#{$filebase}#{$ext}";
+  $filename-retina: "#{$filebase}@2x#{$ext}";
+
+  background: image-url($filename-normal) no-repeat;
+
+  @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+    background-image: image-url($filename-retina);
+    background-size: (image-width($filename-retina) / 2) (image-height($filename-retina) / 2);
+  }
+}
+
+// .foo {
+//   @include retina-background("css3b.png");
+// }
