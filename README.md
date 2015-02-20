@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/minamarkham/sassy-starter.png?label=ready&title=Ready)](https://waffle.io/minamarkham/sassy-starter)
 # Sassy Starter
 
 *Disclaimer: This is an evolving project*
