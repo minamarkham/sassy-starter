@@ -1,5 +1,5 @@
 {
   "name": "Sassy Starter",
   "description": "A starter toolkit based on Scalable and Modular Architecture for CSS (SMACSS) for Sass (SCSS) projects. Do what you'd like with it :)",
-  "tags": ["sass", "starter kit", "boilerplate", "mixin library",  "grunt", "smacss"]
+  "tags": ["sass", "starter kit", "boilerplate", "mixin library",  "gulp", "smacss"]
 }
