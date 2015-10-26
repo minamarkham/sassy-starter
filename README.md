@@ -2,7 +2,7 @@
 
 # Sassy Starter [![Stories in Ready](https://badge.waffle.io/minamarkham/sassy-starter.png?label=ready&title=Ready)](https://waffle.io/minamarkham/sassy-starter)
 
-A starter toolkit based on [Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS) for [Sass](http://sass-lang.com/) (SCSS) projects. Do what you'd like with it :)
+A starter toolkit based on [Scalable and Modular Architecture for CSS](http://smacss.com/) (SMACSS) and [Atomic Design](atomicdesign.bradfrost.com) for [Sass](http://sass-lang.com/) (SCSS) projects. Do what you'd like with it :)
 
 Styles are broken down into the following groups: **Base, Layout, Atoms, Molecules, Organisms, States, Themes, Utilities and Overrides**
 
@@ -15,10 +15,9 @@ Styles are broken down into the following groups: **Base, Layout, Atoms, Molecul
 - Inside this project directory in the termnal, type `npm install`. If (and _only_ if) `npm install` isn't working, try `sudo npm install`.
 - In the terminal, enter `gulp`
 - Your browser should open at `http://localhost:3000`. You can access this same page on any device on the same wifi network and they'll see whats on your screen. It'll even sync scrolls and clicks!
-- Edit your Sass code inside of the `src/scss` folder.
--. Your complied and minified files will be automagically created and updated in `dist/`. It will create your optimized css, html, and javascript files for you. Never edit files within the `dist/` folder, as it gets deleted frequently.
--. Keep `gulp` running while you're making changes. When you want to close out of the gulp task, in the terminal, hit `ctrl + C`
-
+- Edit your code inside of the `src` folder.
+- Your complied and minified files will be automagically created and updated in `dist/`. It will create your optimized css, html, and javascript files for you. Never edit files within the `dist/` folder, as it gets deleted frequently.
+- Keep `gulp` running while you're making changes. When you want to close out of the gulp task, in the terminal, hit `ctrl + C`
 
 ## Requirements
 - LibSass
@@ -41,14 +40,11 @@ Styles are broken down into the following groups: **Base, Layout, Atoms, Molecul
     for CSS normalizations and common bug fixes
   - [`CSS Pesticide`](https://pesticide.io)
     for easy CSS debugging
-  - [`Normalize.css`](https://necolas.github.com/normalize.css/)
-    for CSS normalizations and common bug fixes
   - [`jQuery`](https://jquery.com/) via CDN, with a local fallback
   - [`Modernizr`](http://modernizr.com/), via CDN, for feature
     detection
   - [`Apache Server Configs`](https://github.com/h5bp/server-configs-apache)
     that, among other, improve the web site's performance and security
-
 
 ## Dependencies
 ```
@@ -178,3 +174,4 @@ This toolkit is based on the work of the following fine people & projects.
 
 - [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
 - [Scalable and Modular Architecture for CSS](http://smacss.com/book) (<abbr title="Scalable and Modular Architecture for CSS">SMACSS</abbr>)
+- [Atomic Design](atomicdesign.bradfrost.com)
