@@ -19,7 +19,10 @@ Styles are broken down into the following groups: **Base, Layout, Atoms, Molecul
 - Your complied and minified files will be automagically created and updated in `dist/`. It will create your optimized css, html, and javascript files for you. Never edit files within the `dist/` folder, as it gets deleted frequently.
 - Keep `gulp` running while you're making changes. When you want to close out of the gulp task, in the terminal, hit `ctrl + C`
 
+_For theming: add separate file (theme.scss) in`src/scss/themes/`, override the default `$theme` variable, and run `gulp themes`._
+
 ## Requirements
+- Node/NPM
 - LibSass
 - Gulp
 
@@ -84,6 +87,7 @@ Styles are broken down into the following groups: **Base, Layout, Atoms, Molecul
 - imagemin
 - stats
 - sassdoc
+- themes
 - default
   - clean:dist
   - browser-sync
