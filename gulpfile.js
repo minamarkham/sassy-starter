@@ -81,7 +81,7 @@ var prefixerOptions = {
 // BUILD SUBTASKS
 // ---------------
 
-gulp.task('clean:dist', function () {
+gulp.task('clean:dist', function() {
   return gulp.src(bases.dist)
     .pipe(vinylPaths(del));
 });
@@ -126,7 +126,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('deploy', function () {
+gulp.task('deploy', function() {
   return gulp.src(bases.dist)
     .pipe(deploy());
 });
@@ -172,7 +172,7 @@ gulp.task('copy', function() {
 
 });
 
-gulp.task('sass-lint', function () {
+gulp.task('sass-lint', function() {
   gulp.src([bases.app + 'scss/**/*.scss', '!' + bases.app + 'scss/libs/**/*.scss', '!' + bases.app + 'scss/states/_print.scss'])
     .pipe(sassLint())
     .pipe(sassLint.format())
@@ -197,7 +197,7 @@ gulp.task('watch', function() {
   gulp.watch(bases.app + 'img/*', ['imagemin']);
 });
 
-gulp.task('imagemin', function () {
+gulp.task('imagemin', function() {
   return gulp.src(bases.app + 'img/*')
     .pipe(imagemin({
       progressive: true,
@@ -229,7 +229,7 @@ gulp.task('sassdoc', function () {
 // ------------
 
 gulp.task('default', function(done) {
-  runSequence('clean:dist', 'browser-sync', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'copy', 'watch', done);
+  runSequence('clean:dist', 'browser-sync', 'js-app', 'js-libs', 'imagemin', 'minify-html', 'styles', 'themes', 'copy', 'watch', done);
 });
 
 gulp.task('build', function(done) {

@@ -1,7 +1,3 @@
-// Branding
-
-$theme:                     null !default;
-
 // Color Palette
 // examples based on the official Sass styleguide
 
@@ -34,8 +30,6 @@ $color-note:                #666;
 $color-background:          $white;
 $color-background-shade:    $iron;
 $color-background-invert:   $hopbush;
-$color-border:              $iron;
-$color-text:                darken($pale-sky, 15);
 $color-text-weak:           $regent-grey;
 $color-text-strong:         $midnight-blue;
 $color-text-heading:        $regent-grey;
@@ -62,3 +56,16 @@ $color-success:             #2cde2c;
 $color-warning:             #cf8600;
 $color-important:           #d00;
 $color-notice:              #66b;
+
+// Theming
+
+$theme:                     null !default;
+
+$themes: (
+  rebeccapurple:            #663399,
+  tickledpink:              #CC6699,
+  brightpink:               #ff3377,
+);
+
+@if $theme == rebeccapurple { $color-text: map-get($themes, rebeccapurple); }
+@else { $color-text: darken($pale-sky, 15); }
