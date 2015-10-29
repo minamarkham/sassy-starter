@@ -6,7 +6,7 @@ A starter toolkit based on [Scalable and Modular Architecture for CSS](http://sm
 
 Styles are broken down into the following groups: **Base, Layout, Atoms, Molecules, Organisms, States, Themes, Utilities and Overrides**
 
-## Getting Stated
+## Getting Started
 
 1. In needed, [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
 - Check for Sass (`sass -v`) and install if needed: `npm install node-sass`.
