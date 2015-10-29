@@ -10,14 +10,14 @@ Styles are broken down into the following groups: **Base, Layout, Atoms, Molecul
 
 1. In needed, [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
 - Check for Sass (`sass -v`) and install if needed: `npm install node-sass`.
-- Clone this repo with `git clone https://github.com/minamarkham/sassy-starter` (in terminal) or download the zip.
-- In terminal, `cd` (change directory) to the folder containing your project. Alternatively, you can type `cd ` and drag the location of the folder into your terminal and hit enter.
-- Inside this project directory in the termnal, type `npm install`. If (and _only_ if) `npm install` isn't working, try `sudo npm install`.
-- In the terminal, enter `gulp`
+- Clone this repo with `git clone https://github.com/minamarkham/sassy-starter` or download the zip.
+- In terminal, `cd` to the folder containing your project. Alternatively, you can type `cd ` and drag the location of the folder into your terminal and hit enter (on Macs).
+- In terminal, type `npm install`. If (and _only_ if) `npm install` isn't working, try `sudo npm install`.
+- In terminal, enter `gulp`
 - Your browser should open at `http://localhost:3000`. You can access this same page on any device on the same wifi network and they'll see whats on your screen. It'll even sync scrolls and clicks!
 - Edit your code inside of the `src` folder.
-- Your complied and minified files will be automagically created and updated in `dist/`. It will create your optimized css, html, and javascript files for you. Never edit files within the `dist/` folder, as it gets deleted frequently.
-- Keep `gulp` running while you're making changes. When you want to close out of the gulp task, in the terminal, hit `ctrl + C`
+- Your complied and minified css, html, and javascript files will be created and updated in `dist/`. Never edit files within the `dist/` folder, as it gets deleted frequently.
+- Keep `gulp` running while you're making changes. When you want to stop the gulp task, hit `ctrl + C`.
 
 _For theming: add separate file (theme.scss) in`src/scss/themes/`, override the default `$theme` variable, and run `gulp themes`._
 
