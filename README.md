@@ -9,12 +9,11 @@ Styles are broken down into the following groups: **Base, Layout, Atoms, Molecul
 ## Getting Started
 
 1. If needed, [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
-2. If needed, install `gulp`: `npm install gulp -g`
-- Check for Sass (`sass -v`) and install if needed: `npm install node-sass`.
+- If needed, install `gulp` with `npm install gulp -g`.
 - Clone this repo with `git clone https://github.com/minamarkham/sassy-starter` or download the zip.
 - In terminal, `cd` to the folder containing your project. Alternatively, you can type `cd ` and drag the location of the folder into your terminal and hit enter (on Macs).
-- In terminal, type `npm install`. If (and _only_ if) `npm install` isn't working, try `sudo npm install`.
-- In terminal, enter `gulp`
+- In terminal, type `npm install`. If (and _only_ if) `npm install` isn't working, try `sudo npm install`. This should install all [dependencies](#dependencies).
+- In terminal, enter `gulp`.
 - Your browser should open at `http://localhost:3000`. You can access this same page on any device on the same wifi network and they'll see whats on your screen. It'll even sync scrolls and clicks!
 - Edit your code inside of the `src` folder.
 - Your complied and minified css, html, and javascript files will be created and updated in `dist/`. Never edit files within the `dist/` folder, as it gets deleted frequently.
