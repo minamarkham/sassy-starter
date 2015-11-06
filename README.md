@@ -8,7 +8,8 @@ Styles are broken down into the following groups: **Base, Layout, Atoms, Molecul
 
 ## Getting Started
 
-1. In needed, [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
+1. If needed, [install](http://blog.nodeknockout.com/post/65463770933/how-to-install-node-js-and-npm) `node` and `npm` (Node Package Manager).
+2. If needed, install `gulp`: `npm install gulp -g`
 - Check for Sass (`sass -v`) and install if needed: `npm install node-sass`.
 - Clone this repo with `git clone https://github.com/minamarkham/sassy-starter` or download the zip.
 - In terminal, `cd` to the folder containing your project. Alternatively, you can type `cd ` and drag the location of the folder into your terminal and hit enter (on Macs).
