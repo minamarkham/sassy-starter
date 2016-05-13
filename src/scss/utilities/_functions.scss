@@ -52,7 +52,6 @@
     $context: strip-units($context);
   }
   @if $target == 0 { @return 0 }
-  @if $target == 0 { @return 0 }
   @return $target / $context + 0rem;
 }
 
