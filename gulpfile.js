@@ -1,14 +1,14 @@
 var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
     rename      = require('gulp-rename'),
-    cssmin      = require('gulp-minify-css'),
+    cleanCSS    = require('gulp-clean-css'),
     concat      = require('gulp-concat'),
     uglify      = require('gulp-uglify'),
     jshint      = require('gulp-jshint'),
     prefix      = require('gulp-autoprefixer'),
     browserSync = require('browser-sync'),
     reload      = browserSync.reload,
-    minifyHTML  = require('gulp-minify-html'),
+    htmlmin     = require('gulp-htmlmin'),
     size        = require('gulp-size'),
     imagemin    = require('gulp-imagemin'),
     pngquant    = require('imagemin-pngquant'),
@@ -97,7 +97,10 @@ gulp.task('styles', function() {
     .pipe(rename('styles.css'))
     .pipe(gulp.dest(bases.dist + 'css'))
     .pipe(reload({stream:true}))
-    .pipe(cssmin())
+    .pipe(cleanCSS({debug: true}, function(details) {
+      console.log(details.name + ': ' + details.stats.originalSize);
+      console.log(details.name + ': ' + details.stats.minifiedSize);
+    }))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(bases.dist + 'css'))
@@ -112,7 +115,10 @@ gulp.task('themes', function() {
     .pipe(prefix(prefixerOptions))
     .pipe(gulp.dest(bases.dist + 'css/themes'))
     .pipe(reload({stream:true}))
-    .pipe(cssmin())
+    .pipe(cleanCSS({debug: true}, function(details) {
+      console.log(details.name + ': ' + details.stats.originalSize);
+      console.log(details.name + ': ' + details.stats.minifiedSize);
+    }))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(bases.dist + 'css/themes'))
@@ -180,13 +186,8 @@ gulp.task('sass-lint', function() {
 });
 
 gulp.task('minify-html', function() {
-  var opts = {
-    comments:true,
-    spare:true
-  };
-
   gulp.src(bases.app + './*.html')
-    .pipe(minifyHTML(opts))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}));
 });
