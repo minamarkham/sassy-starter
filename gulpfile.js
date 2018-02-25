@@ -176,6 +176,12 @@ gulp.task('copy', function() {
     .pipe(gulp.dest(bases.dist))
     .pipe(reload({stream:true}));
 
+  // copy fonts to dist directly
+  gulp.src([bases.app + 'fonts/*'])
+    .pipe(size({ gzip: true, showFiles: true }))
+    .pipe(gulp.dest(bases.dist + 'fonts/'))
+    .pipe(reload({stream:true}));
+
 });
 
 gulp.task('sass-lint', function() {
