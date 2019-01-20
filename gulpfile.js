@@ -95,6 +95,7 @@ gulp.task('styles', function() {
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(prefix(prefixerOptions))
     .pipe(rename('styles.css'))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(bases.dist + 'css'))
     .pipe(reload({stream:true}))
     .pipe(cleanCSS({debug: true}, function(details) {
@@ -113,6 +114,7 @@ gulp.task('themes', function() {
     .pipe(sass(sassOptions))
     .pipe(size({ gzip: true, showFiles: true }))
     .pipe(prefix(prefixerOptions))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(bases.dist + 'css/themes'))
     .pipe(reload({stream:true}))
     .pipe(cleanCSS({debug: true}, function(details) {
